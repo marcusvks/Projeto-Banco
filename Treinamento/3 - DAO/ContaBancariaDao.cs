@@ -8,11 +8,13 @@ namespace Treinamento
 {
     public class ContaBancariaDao
     {
-        public List<ContaBancaria> listaDeContaBancarias = new List<ContaBancaria>();
+        private List<ContaBancaria> listaDeContaBancarias = new List<ContaBancaria>();
+
         public void CadastraContaBancaria(ContaBancaria contaBancaria)
         {
             listaDeContaBancarias.Add(contaBancaria);
         }
+
         public List<ContaBancaria> ListaContaBancarias()
         {
             return listaDeContaBancarias;

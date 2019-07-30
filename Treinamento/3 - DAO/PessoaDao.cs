@@ -8,7 +8,8 @@ namespace Treinamento
 {
     public class PessoaDao
     {
-        public List<Pessoa> listaDePessoas = new List<Pessoa>();
+        private List<Pessoa> listaDePessoas = new List<Pessoa>();
+        
         public void CadastraPessoas(Pessoa pessoa)
         {
             listaDePessoas.Add(pessoa);

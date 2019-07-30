@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Treinamento
 {
     public class AgenciaDao
     {
-        public List<Agencia> listaDeAgencias = new List<Agencia>();
+        private List<Agencia> listaDeAgencias = new List<Agencia>();
+
         public void CadastraAgencia(Agencia agencia)
         {
             listaDeAgencias.Add(agencia);
@@ -23,7 +20,9 @@ namespace Treinamento
             foreach (var agencia in listaDeAgencias)
             {
                 if (agencia.GetId() == id)
+                {
                     return agencia;
+                }
             }
 
             return null;

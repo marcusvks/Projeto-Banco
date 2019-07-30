@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Treinamento
 {
-    public static class ValidadorDePessoa
+    public static class ValidadorDeDocumento
     {
         public static bool ValidaCpf(string cpf)
         {
