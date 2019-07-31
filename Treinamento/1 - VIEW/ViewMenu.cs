@@ -9,11 +9,11 @@ namespace Treinamento._1___VIEW
     public class ViewMenu
     {
         private static ConsoleKeyInfo _opcao;
-
+        //view
         private static ViewAgencia _viewAgencia = new ViewAgencia();
         private static ViewContaBancaria _viewContaBancaria = new ViewContaBancaria();
         private static ViewPessoa _viewPessoa = new ViewPessoa();
-
+        //dao
         private ContaBancariaDao _contaDao = new ContaBancariaDao();
         private AgenciaDao _agenciaDao = new AgenciaDao();
         private PessoaDao _pessoaDao = new PessoaDao();
@@ -25,7 +25,7 @@ namespace Treinamento._1___VIEW
 
             do
             {
-                Console.WriteLine("\n Digite: \n f1 para cadastrar uma pessoa fisica ou jurídica \n f2 para cadastrar uma conta bancaria \n f3 para cadastrar uma agencia \n f4 para listar as pessoas \n f5 para listar as agencias \n f9 para sair");
+                Console.WriteLine("\n PRESSIONE: \n\n F1 para cadastrar uma pessoa fisica ou jurídica \n F2 para cadastrar uma conta bancaria \n F3 para cadastrar uma agencia \n F4 para listar as pessoas \n F5 para listar as agencias \n F9 para sair");
                 _opcao = Console.ReadKey();
                 switch (_opcao.Key)
                 {

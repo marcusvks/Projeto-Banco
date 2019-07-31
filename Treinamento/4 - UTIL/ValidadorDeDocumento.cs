@@ -8,7 +8,7 @@ namespace Treinamento
 {
     public static class ValidadorDeDocumento
     {
-        public static bool ValidaCpf(string cpf)
+        public static bool ValidaCpf(this string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -44,7 +44,7 @@ namespace Treinamento
             digito = digito + resto.ToString();
             return cpf.EndsWith(digito);
         }
-        public static bool ValidaCnpj(string cnpj)
+        public static bool ValidaCnpj(this string cnpj)
         {
             int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
