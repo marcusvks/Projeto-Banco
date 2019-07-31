@@ -32,7 +32,7 @@ namespace Treinamento._1___VIEW
             {
                 Console.WriteLine("Digite seu cpf");
                 _cpf = Console.ReadLine();
-                ValidadorDeDocumento.ValidaCpf(_cpf);
+                _cpf.ValidaCpf();
                 _cpfCnpj = _cnpj;
 
             }
@@ -40,7 +40,7 @@ namespace Treinamento._1___VIEW
             {
                 Console.WriteLine("Digite seu cnpj");
                 _cnpj = Console.ReadLine();
-                ValidadorDeDocumento.ValidaCnpj(_cnpj);
+                _cnpj.ValidaCnpj();
                 _cpfCnpj = _cnpj;
             }
             else
