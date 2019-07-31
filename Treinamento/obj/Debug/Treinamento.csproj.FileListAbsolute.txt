@@ -50,3 +50,16 @@ C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\T
 C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
 C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.exe
 C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csprojAssemblyReference.cache
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInputs.cache
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\obj\Debug\Treinamento.exe
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\obj\Debug\Treinamento.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\Treinamento.exe.config
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\Treinamento.exe
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\Treinamento.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.dll
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.xml
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Projetos\TreinamentoBank\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete

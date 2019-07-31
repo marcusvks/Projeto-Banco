@@ -17,13 +17,7 @@ namespace Treinamento
 
         public Agencia BuscaAgenciaPorId(int id)
         {
-            foreach (var agencia in listaDeAgencias)
-            {
-                if (agencia.RetornaId() == id)
-                    return agencia;
-            }
-
-            return null;
+            return listaDeAgencias.Find(a => a.Id  == id);
         }
     }
 }

@@ -4,11 +4,11 @@ namespace Treinamento._1___VIEW
 {
     public class ViewPessoa
     {
-        private string _cpf, _cnpj, _cpfCnpj;
 
         public void CadastraPessoa(PessoaDao _pessoaDao)
         {
             Pessoa novapessoa;
+            string CpfCnpj, TipoPessoa = null;
 
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
@@ -25,30 +25,21 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Digite o numero do endereço");
             int numEndereco = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Se for pessoa fisica digite F se for juridica J");
-            string tipoPessoa = Console.ReadLine();
+            Console.WriteLine("Digite seu CPJ ou CNPJ");
+            CpfCnpj = Console.ReadLine();
 
-            if (tipoPessoa.ToUpper() == "F")
-            {
-                Console.WriteLine("Digite seu cpf");
-                _cpf = Console.ReadLine();
-                _cpf.ValidaCpf();
-                _cpfCnpj = _cnpj;
+            string RetornoValidacao = CpfCnpj.ValidaCpfCnpj();
 
-            }
-            else if (tipoPessoa.ToUpper() == "J")
-            {
-                Console.WriteLine("Digite seu cnpj");
-                _cnpj = Console.ReadLine();
-                _cnpj.ValidaCnpj();
-                _cpfCnpj = _cnpj;
-            }
+            if (RetornoValidacao == "cpf")
+                    TipoPessoa = "Pessoa Fisica";
+
+            else if (RetornoValidacao == "cnpj")
+                    TipoPessoa = "Pessoa Juridica";
+
             else
-            {
-                Console.WriteLine("Tipo de pessoa invalido");
-            }
+                Console.WriteLine("Cpf ou Cnpj invalido");
 
-            novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, tipoPessoa, estado, _cpfCnpj, _pessoaDao);
+            novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, TipoPessoa, estado, CpfCnpj, _pessoaDao);
             _pessoaDao.CadastraPessoas(novapessoa);
 
             Console.Clear();
@@ -59,13 +50,19 @@ namespace Treinamento._1___VIEW
 
         public void FormataListaDadosPessoa(PessoaDao pessoaDao)
         {
+            Console.Clear();
+
             foreach (var pessoa in pessoaDao.ListaPessoas())
             {
-                Console.WriteLine($"\nID: {pessoa.RetornaId()}" +
-                    $" \n Nome: {pessoa.RetornaNome()} \n Cpf: {pessoa.RetornaCpf()} \n Cnpj: {pessoa.RetornaCnpj()}" +
-                    $" \n Cidade: {pessoa.RetornaNomeCidade()} \n DataNascimento: {pessoa.RetornaDataNasc()} " +
-                    $"\n NumEndereço: {pessoa.RetornaNumeroEndereco()} \n Tipo de Pessoa: {pessoa.RetornaTipoPessoa()}");
+                Console.WriteLine($"\nID: {pessoa.Id}" +
+                    $" \n Nome: {pessoa.Nome} \n Cpf: {pessoa.Cpf} \n Cnpj: {pessoa.Cnpj}" +
+                    $" \n Cidade: {pessoa.NomeCidade} \n DataNascimento: {pessoa.DataNasc} " +
+                    $"\n NumEndereço: {pessoa.NumeroEndereco} \n Tipo de Pessoa: {pessoa.TipoPessoa}");
             }
+
+            Console.WriteLine("\n Pressione qualquer tecla para voltar ao menu inicial");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

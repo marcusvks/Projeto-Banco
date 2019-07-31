@@ -8,45 +8,19 @@ namespace Treinamento
 {
     public class ContaBancaria
     {
-        private int _id { get; set; }
-        private string _conta { get; set; }
-        public Agencia Agencia { get; set; }
-        private Pessoa _donoDaConta { get; set; }
-        private double _saldo { get; set; }
-        private string _dataAbertura { get; set; }
+        public int Id { get; set; }
+        public string Conta { get; private set; }
+        public Agencia Agencia { get; private set; }
+        public Pessoa DonoDaConta { get; private set; }
+        public double Saldo { get; private set; }
+        public string DataAbertura { get; private set; }
 
         public ContaBancaria(string conta, Agencia agencia, Pessoa donodaconta)
         {
-            _id += 1;
-            _conta = conta;
+            Conta = conta;
             Agencia = agencia;
-            _donoDaConta = donodaconta;
-            _dataAbertura = DateTime.Now.ToString();
-        }
-
-        public int RetornaId()
-        {
-            return _id;
-        }
-
-        public string RetornaConta()
-        {
-            return _conta;
-        }
-
-        public Pessoa RetornaDonoDaConta()
-        {
-            return _donoDaConta;
-        }
-
-        public double PegaSaldo()
-        {
-            return _saldo;
-        }
-
-        public string RetornaDataAbertura()
-        {
-            return _dataAbertura;
+            DonoDaConta = donodaconta;
+            DataAbertura = DateTime.Now.ToString();
         }
     }
 }
