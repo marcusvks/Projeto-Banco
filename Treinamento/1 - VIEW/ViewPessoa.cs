@@ -30,8 +30,6 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Se for pessoa fisica digite F se for juridica J");
             string tipoPessoa = Console.ReadLine();
 
-
-
             if (tipoPessoa.ToUpper() == "F")
             {
                 Console.WriteLine("Digite seu cpf");
@@ -80,10 +78,10 @@ namespace Treinamento._1___VIEW
         {
             foreach (var pessoa in _pessoaDao.ListaPessoas())
             {
-                Console.WriteLine($"\nID: {pessoa.GetId()}" +
-                    $" \n Nome: {pessoa.GetNome()} \n Cpf: {pessoa.GetCpf()} \n Cnpj: {pessoa.GetCnpj()}" +
-                    $" \n Cidade: {pessoa.GetNomeCidade()} \n DataNascimento: {pessoa.GetDataNasc()} " +
-                    $"\n NumEndereço: {pessoa.GetNumeroEndereco()} \n Tipo de Pessoa: {pessoa.GetTipoPessoa()}");
+                Console.WriteLine($"\nID: {pessoa.RetornaId()}" +
+                    $" \n Nome: {pessoa.RetornaNome()} \n Cpf: {pessoa.RetornaCpf()} \n Cnpj: {pessoa.RetornaCnpj()}" +
+                    $" \n Cidade: {pessoa.RetornaNomeCidade()} \n DataNascimento: {pessoa.RetornaDataNasc()} " +
+                    $"\n NumEndereço: {pessoa.RetornaNumeroEndereco()} \n Tipo de Pessoa: {pessoa.RetornaTipoPessoa()}");
             }
         }
     }

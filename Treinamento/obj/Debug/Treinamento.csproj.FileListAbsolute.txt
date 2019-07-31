@@ -37,3 +37,16 @@ C:\Users\ndduser\Downloads\Projeto-Banco-master\Treinamento\obj\Debug\Treinament
 C:\Users\ndduser\Downloads\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
 C:\Users\ndduser\Downloads\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.exe
 C:\Users\ndduser\Downloads\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.pdb
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\Treinamento.exe.config
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\Treinamento.exe
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\Treinamento.pdb
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\ControlzEx.dll
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\ControlzEx.pdb
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\ControlzEx.xml
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csprojAssemblyReference.cache
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInputs.cache
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.exe
+C:\Users\marcus.kayser\Documents\Projeto-Banco-master (1)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.pdb

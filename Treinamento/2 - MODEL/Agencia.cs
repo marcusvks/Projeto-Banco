@@ -23,27 +23,27 @@ namespace Treinamento
             _uf = uf;
         }
 
-        public int GetId()
+        public int RetornaId()
         {
             return _id;
         }
 
-        public string GetCodigo()
+        public string RetornaCodigo()
         {
             return _codigo;
         }
 
-        public string GetNome()
+        public string RetornaNome()
         {
             return _nome;
         }
 
-        public string GetNomeCidade()
+        public string RetornaNomeCidade()
         {
             return _nomeCidade;
         }
 
-        public string GetUf()
+        public string RetornaUf()
         {
             return _uf;
         }

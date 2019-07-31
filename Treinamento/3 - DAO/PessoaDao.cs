@@ -8,8 +8,8 @@ namespace Treinamento
 {
     public class PessoaDao
     {
-        private List<Pessoa> listaDePessoas = new List<Pessoa>();
-        
+        private static List<Pessoa> listaDePessoas = new List<Pessoa>();
+
         public void CadastraPessoas(Pessoa pessoa)
         {
             listaDePessoas.Add(pessoa);
@@ -24,11 +24,21 @@ namespace Treinamento
         {
             foreach (var pessoa in listaDePessoas)
             {
-                if (pessoa.GetId() == id)
+                if (pessoa.RetornaId() == id)
                     return pessoa;
             }
 
             return null;
+        }
+
+        public int PegaUltimoId()
+        {
+            Pessoa ultimoId = listaDePessoas.LastOrDefault();
+
+            if (ultimoId != null)
+                return ultimoId.RetornaId();
+
+            return 0;
         }
     }
 }

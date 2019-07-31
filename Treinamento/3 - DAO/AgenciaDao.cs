@@ -19,7 +19,7 @@ namespace Treinamento
         {
             foreach (var agencia in listaDeAgencias)
             {
-                if (agencia.GetId() == id)
+                if (agencia.RetornaId() == id)
                 {
                     return agencia;
                 }

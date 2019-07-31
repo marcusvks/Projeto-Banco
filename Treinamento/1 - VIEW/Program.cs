@@ -14,35 +14,40 @@ namespace Treinamento
         public static ViewAgencia viewAgencia = new ViewAgencia();
         public static ViewContaBancaria viewContaBancaria = new ViewContaBancaria();
         public static ViewPessoa viewPessoa = new ViewPessoa();
-        public static int OpcaoMenu;
+        public static ConsoleKeyInfo opcao;
 
         static void Main(string[] args)
         {
             Console.WriteLine("\n É PRECISO PRIMEIRO TER PESSOA E AGENCIA PRA FUNGA \n");
-            while (OpcaoMenu != 9)
-            {
-                Console.WriteLine("\n Digite: \n 1 para cadastrar uma pessoa fisica ou jurídica \n 2 para cadastrar uma conta bancaria \n 3 para cadastrar uma agencia \n 4 para listar as pessoas \n 5 para listar as agencias \n 9 para sair");
-                OpcaoMenu = Convert.ToInt16(Console.ReadLine());
 
-                switch (OpcaoMenu)
+            do
+            {                
+                Console.WriteLine("\n Digite: \n f1 para cadastrar uma pessoa fisica ou jurídica \n f2 para cadastrar uma conta bancaria \n f3 para cadastrar uma agencia \n f4 para listar as pessoas \n f5 para listar as agencias \n f9 para sair");
+                opcao = Console.ReadKey();
+                switch (opcao.Key)
                 {
-                    case 1:
+                    case ConsoleKey.F1:
+                        Console.Clear();
                         viewPessoa.CadastraPessoa();
                         break;
-                    case 2:
+                    case ConsoleKey.F2:
+                        Console.Clear();
                         viewContaBancaria.CadastraContaBancaria();
                         break;
-                    case 3:
+                    case ConsoleKey.F3:
+                        Console.Clear();
                         viewAgencia.CadastraAgencia();
                         break;
-                    case 4:
+                    case ConsoleKey.F4:
+                        Console.Clear();
                         viewPessoa.FormataListaDadosPessoa();
                         break;
-                    case 5:
+                    case ConsoleKey.F5:
+                        Console.Clear();
                         viewAgencia.FormataListaAgencias();
                         break;
                 }
-            }
+            } while (opcao.Key != ConsoleKey.F9);
         }
     }
 }

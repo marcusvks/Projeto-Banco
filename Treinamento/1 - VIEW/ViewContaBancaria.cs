@@ -51,9 +51,6 @@ namespace Treinamento._1___VIEW
             {
                 Console.WriteLine("Agencia nao encontrada");
             }
-
         }
-
-
     }
 }

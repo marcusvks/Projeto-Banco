@@ -24,27 +24,27 @@ namespace Treinamento
             _dataAbertura = DateTime.Now.ToString();
         }
 
-        public int GetId()
+        public int RetornaId()
         {
             return _id;
         }
 
-        public string GetConta()
+        public string RetornaConta()
         {
             return _conta;
         }
 
-        public Pessoa GetDonoDaConta()
+        public Pessoa RetornaDonoDaConta()
         {
             return _donoDaConta;
         }
 
-        public double GetSaldo()
+        public double PegaSaldo()
         {
             return _saldo;
         }
 
-        public string GetDataAbertura()
+        public string RetornaDataAbertura()
         {
             return _dataAbertura;
         }

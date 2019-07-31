@@ -27,8 +27,61 @@ namespace Treinamento
             _tipoPessoa = (tipopessoa.ToUpper() == "F") ? "Pessoa Fisica" : "Pessoa Juridica";
             _nomeCidade = nomecidade;
             _uf = estado;
-            _id += 1;
+            _id = PegaUltimoId() + 1;
+            GravaCpfOuCnpj(cpfCnpj);
+        }
 
+        public int RetornaId()
+        {
+            return _id;
+        }
+
+        public string RetornaNome()
+        {
+            return _nome;
+        }
+        public string RetornaCpf()
+        {
+            return _cpf;
+        }
+        public string RetornaCnpj()
+        {
+            return _cnpj;
+        }
+
+        public string RetornaNomeCidade()
+        {
+            return _nomeCidade;
+        }
+
+        public string RetornaDataNasc()
+        {
+            return _dataNasc;
+        }
+
+        public int RetornaNumeroEndereco()
+        {
+            return _numeroEndereco;
+        }
+
+        public string RetornaTipoPessoa()
+        {
+            return _tipoPessoa;
+        }
+
+        public string RetornaUf()
+        {
+            return _uf;
+        }
+
+        public int PegaUltimoId()
+        {
+            PessoaDao ultimoId = new PessoaDao();
+            return ultimoId.PegaUltimoId();
+        }
+
+        public void GravaCpfOuCnpj(string cpfCnpj)
+        {
             if (cpfCnpj.Length > 11)
             {
                 _cnpj = cpfCnpj;
@@ -37,49 +90,6 @@ namespace Treinamento
             {
                 _cpf = cpfCnpj;
             }
-        }
-
-        public int GetId()
-        {
-            return _id;
-        }
-
-        public string GetNome()
-        {
-            return _nome;
-        }
-        public string GetCpf()
-        {
-            return _cpf;
-        }
-        public string GetCnpj()
-        {
-            return _cnpj;
-        }
-
-        public string GetNomeCidade()
-        {
-            return _nomeCidade;
-        }
-
-        public string GetDataNasc()
-        {
-            return _dataNasc;
-        }
-
-        public int GetNumeroEndereco()
-        {
-            return _numeroEndereco;
-        }
-
-        public string GetTipoPessoa()
-        {
-            return _tipoPessoa;
-        }
-
-        public string GetUf()
-        {
-            return _uf;
         }
     }
 }

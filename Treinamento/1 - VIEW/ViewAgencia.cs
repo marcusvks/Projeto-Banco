@@ -30,7 +30,7 @@ namespace Treinamento._1___VIEW
             foreach (var agencia in _agenciaDao.ListaAgencias())
             {
                 Console.WriteLine("\n ID: {0} Nome: {1} Codigo: {2} Cidade: {3} Estado: {4} \n",
-                    agencia.GetId(), agencia.GetNome(), agencia.GetCodigo(), agencia.GetNomeCidade(), agencia.GetUf());
+                    agencia.RetornaId(), agencia.RetornaNome(), agencia.RetornaCodigo(), agencia.RetornaNomeCidade(), agencia.RetornaUf());
             }
 
         }
