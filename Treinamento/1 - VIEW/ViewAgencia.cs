@@ -4,8 +4,8 @@ namespace Treinamento._1___VIEW
 {
     public class ViewAgencia
     {
-        private AgenciaDao _agenciaDao = new AgenciaDao();
-        public void CadastraAgencia()
+
+        public void CadastraAgencia(AgenciaDao _agenciaDao)
         {
             Console.WriteLine("Digite o codigo da agencia");
             string CodAgencia = Console.ReadLine();
@@ -22,10 +22,14 @@ namespace Treinamento._1___VIEW
             Agencia agencia = new Agencia(CodAgencia, NomeAgencia, NomeCidade, Estado);
 
             _agenciaDao.CadastraAgencia(agencia);
-            Console.WriteLine("Agencia cadastrada com sucesso");
+
+            Console.Clear();
+            Console.WriteLine("Agencia cadastrada com sucesso \n Pressione qualquer tecla para voltar ao menu");
+            Console.ReadKey();
+            Console.Clear();
         }
 
-        public void FormataListaAgencias()
+        public void FormataListaAgencias(AgenciaDao _agenciaDao)
         {
             foreach (var agencia in _agenciaDao.ListaAgencias())
             {

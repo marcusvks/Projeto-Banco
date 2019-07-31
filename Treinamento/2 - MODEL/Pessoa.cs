@@ -19,7 +19,7 @@ namespace Treinamento
         private int _numeroEndereco { get; set; }
         private string _uf { get; set; }
 
-        public Pessoa(string nome, string nomecidade, string datanasc, int numendereco, string tipopessoa, string estado, string cpfCnpj)
+        public Pessoa(string nome, string nomecidade, string datanasc, int numendereco, string tipopessoa, string estado, string cpfCnpj, PessoaDao ultimoId)
         {
             _nome = nome;
             _dataNasc = datanasc;
@@ -27,7 +27,6 @@ namespace Treinamento
             _tipoPessoa = (tipopessoa.ToUpper() == "F") ? "Pessoa Fisica" : "Pessoa Juridica";
             _nomeCidade = nomecidade;
             _uf = estado;
-            _id = PegaUltimoId() + 1;
             GravaCpfOuCnpj(cpfCnpj);
         }
 
@@ -74,22 +73,17 @@ namespace Treinamento
             return _uf;
         }
 
-        public int PegaUltimoId()
+        public void SetaId(int id)
         {
-            PessoaDao ultimoId = new PessoaDao();
-            return ultimoId.PegaUltimoId();
+            _id = id;
         }
 
         public void GravaCpfOuCnpj(string cpfCnpj)
         {
             if (cpfCnpj.Length > 11)
-            {
                 _cnpj = cpfCnpj;
-            }
             else
-            {
                 _cpf = cpfCnpj;
-            }
         }
     }
 }

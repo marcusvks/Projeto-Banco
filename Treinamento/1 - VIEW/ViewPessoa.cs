@@ -4,11 +4,9 @@ namespace Treinamento._1___VIEW
 {
     public class ViewPessoa
     {
-        private string _cpf;
-        private string _cnpj;
-        private string _cpfCnpj;
-        private PessoaDao _pessoaDao = new PessoaDao();
-        public void CadastraPessoa()
+        private string _cpf, _cnpj, _cpfCnpj;
+
+        public void CadastraPessoa(PessoaDao _pessoaDao)
         {
             Pessoa novapessoa;
 
@@ -34,49 +32,34 @@ namespace Treinamento._1___VIEW
             {
                 Console.WriteLine("Digite seu cpf");
                 _cpf = Console.ReadLine();
+                ValidadorDeDocumento.ValidaCpf(_cpf);
+                _cpfCnpj = _cnpj;
 
             }
             else if (tipoPessoa.ToUpper() == "J")
             {
                 Console.WriteLine("Digite seu cnpj");
                 _cnpj = Console.ReadLine();
+                ValidadorDeDocumento.ValidaCnpj(_cnpj);
+                _cpfCnpj = _cnpj;
             }
             else
             {
                 Console.WriteLine("Tipo de pessoa invalido");
             }
 
-            if (!string.IsNullOrEmpty(_cpf))
-            {
-                ValidadorDeDocumento.ValidaCpf(_cpf);
-                _cpfCnpj = _cpf;
-            }
-            else
-            {
-                ValidadorDeDocumento.ValidaCnpj(_cnpj);
-                _cpfCnpj = _cnpj;
-            }
-
-            novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, tipoPessoa, estado, _cpfCnpj);
+            novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, tipoPessoa, estado, _cpfCnpj, _pessoaDao);
             _pessoaDao.CadastraPessoas(novapessoa);
 
-            Console.WriteLine("Pessoa cadastrada com sucesso");
+            Console.Clear();
+            Console.WriteLine("Pessoa cadastrada com sucesso \n Pressione qualquer tecla para voltar ao menu");
+            Console.ReadKey();
+            Console.Clear();
         }
 
-        public bool VerificaCpf(string cpf)
+        public void FormataListaDadosPessoa(PessoaDao pessoaDao)
         {
-            return ValidadorDeDocumento.ValidaCpf(cpf);
-
-        }
-
-        public bool VerificaCnpj(string cnpj)
-        {
-            return ValidadorDeDocumento.ValidaCpf(cnpj);
-        }
-
-        public void FormataListaDadosPessoa()
-        {
-            foreach (var pessoa in _pessoaDao.ListaPessoas())
+            foreach (var pessoa in pessoaDao.ListaPessoas())
             {
                 Console.WriteLine($"\nID: {pessoa.RetornaId()}" +
                     $" \n Nome: {pessoa.RetornaNome()} \n Cpf: {pessoa.RetornaCpf()} \n Cnpj: {pessoa.RetornaCnpj()}" +

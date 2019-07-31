@@ -8,10 +8,11 @@ namespace Treinamento
 {
     public class PessoaDao
     {
-        private static List<Pessoa> listaDePessoas = new List<Pessoa>();
+        private List<Pessoa> listaDePessoas = new List<Pessoa>();
 
         public void CadastraPessoas(Pessoa pessoa)
         {
+            pessoa.SetaId(PegaUltimoId()+1);
             listaDePessoas.Add(pessoa);
         }
 
