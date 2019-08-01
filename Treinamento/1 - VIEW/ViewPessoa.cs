@@ -9,6 +9,7 @@ namespace Treinamento._1___VIEW
         public void CadastraPessoa(PessoaDao _pessoaDao)
         {
             Pessoa novapessoa;
+            string CpfCnpj, TipoPessoa = null;
 
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
