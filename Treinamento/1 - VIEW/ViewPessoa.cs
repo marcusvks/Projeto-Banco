@@ -4,7 +4,6 @@ namespace Treinamento._1___VIEW
 {
     public class ViewPessoa
     {
-        private string _tipoPessoa, _cpfCnpj = null;
 
         public void CadastraPessoa(PessoaDao _pessoaDao)
         {
@@ -24,8 +23,10 @@ namespace Treinamento._1___VIEW
 
             Console.WriteLine("Digite o numero do endereço");
             int numEndereco = Convert.ToInt32(Console.ReadLine());
-
-            PedeCpfOuCnpj();
+         
+            string _cpfCnpj = LerCPFCNPJ();
+        
+            string _tipoPessoa = PedeCpfOuCnpj(ref _cpfCnpj);
 
             novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj, _pessoaDao);
             _pessoaDao.CadastraPessoas(novapessoa);
@@ -53,34 +54,35 @@ namespace Treinamento._1___VIEW
             Console.Clear();
         }
 
-        public void PedeCpfOuCnpj()
+        public string PedeCpfOuCnpj(ref string _cpfCnpj)
         {
-            bool ControlValidacao = false;
-
             do
             {
-                ControlValidacao = false;
-
-                Console.WriteLine("\nDigite seu CPJ ou CNPJ: \n");
-                _cpfCnpj = Console.ReadLine();
-
                 string RetornoValidacao = _cpfCnpj.ValidaCpfCnpj();
 
                 if (RetornoValidacao == "cpf")
-                    _tipoPessoa = "Pessoa Fisica";
+                    return "Pessoa Fisica";
 
                 else if (RetornoValidacao == "cnpj")
-                    _tipoPessoa = "Pessoa Juridica";
+                    return "Pessoa Juridica";
                 else
                 {
                     Console.Clear();
                     Console.WriteLine("Cpf ou Cnpj invalido");
-                    ControlValidacao = true;
-                    
                 }
 
-            } while (ControlValidacao == true);
+                _cpfCnpj = LerCPFCNPJ();
 
+            } while (true);
+
+        }
+
+        private string LerCPFCNPJ()
+        {
+            string _cpfCnpj;
+            Console.WriteLine("\nDigite seu CPJ ou CNPJ: \n");
+            _cpfCnpj = Console.ReadLine();
+            return _cpfCnpj;
         }
     }
 }
