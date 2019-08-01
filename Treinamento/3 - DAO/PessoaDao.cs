@@ -12,7 +12,7 @@ namespace Treinamento
 
         public void CadastraPessoas(Pessoa pessoa)
         {
-            pessoa.SetaId(PegaUltimoId()+1);
+            pessoa.Id = (PegaUltimoId()+1);
             listaDePessoas.Add(pessoa);
         }
 
@@ -25,7 +25,7 @@ namespace Treinamento
         {
             foreach (var pessoa in listaDePessoas)
             {
-                if (pessoa.RetornaId() == id)
+                if (pessoa.Id == id)
                     return pessoa;
             }
 
@@ -37,7 +37,7 @@ namespace Treinamento
             Pessoa ultimoId = listaDePessoas.LastOrDefault();
 
             if (ultimoId != null)
-                return ultimoId.RetornaId();
+                return ultimoId.Id;
 
             return 0;
         }

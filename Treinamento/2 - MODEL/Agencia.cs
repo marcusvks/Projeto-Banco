@@ -8,44 +8,18 @@ namespace Treinamento
 {
     public class Agencia
     {
-        private int _id { get; set; }
-        private string _codigo { get; set; }
-        private string _nome { get; set; }
-        private string _nomeCidade { get; set; }
-        private string _uf { get; set; }
+        public int Id { get; private set; }
+        public string Codigo { get; private set; }
+        public string Nome { get; private set; }
+        public string NomeCidade { get; private set; }
+        public string Uf { get; private set; }
 
         public Agencia(string codigo, string nome, string nomecidade, string uf)
         {
-            _id += 1;
-            _codigo = codigo;
-            _nome = nome;
-            _nomeCidade = nomecidade;
-            _uf = uf;
-        }
-
-        public int RetornaId()
-        {
-            return _id;
-        }
-
-        public string RetornaCodigo()
-        {
-            return _codigo;
-        }
-
-        public string RetornaNome()
-        {
-            return _nome;
-        }
-
-        public string RetornaNomeCidade()
-        {
-            return _nomeCidade;
-        }
-
-        public string RetornaUf()
-        {
-            return _uf;
+            Codigo = codigo;
+            Nome = nome;
+            NomeCidade = nomecidade;
+            Uf = uf;
         }
     }
 }
