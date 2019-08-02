@@ -22,5 +22,20 @@ namespace Treinamento
             DonoDaConta = donodaconta;
             DataAbertura = DateTime.Now.ToString();
         }
+
+        public void Saque(double quantia)
+        {
+
+        }
+
+        public void Deposito(double quantia)
+        {
+
+        }
+
+        public void Transferencia(ContaBancaria conta1, ContaBancaria conta2)
+        {
+
+        }
     }
 }

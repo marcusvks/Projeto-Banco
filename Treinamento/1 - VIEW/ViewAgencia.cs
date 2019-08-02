@@ -38,10 +38,6 @@ namespace Treinamento._1___VIEW
                 Console.WriteLine("\n ID: {0} Nome: {1} Codigo: {2} Cidade: {3} Estado: {4} \n",
                     agencia.Id, agencia.Nome, agencia.Codigo, agencia.NomeCidade, agencia.Uf);
             }
-
-            Console.WriteLine("\n Pressione qualquer tecla para voltar ao menu inicial");
-            Console.ReadKey();
-            Console.Clear();
         }
     }
 }

@@ -76,3 +76,15 @@ D:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInpu
 D:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
 D:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.exe
 D:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.pdb
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInputs.cache
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\Treinamento.exe.config
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\Treinamento.exe
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\Treinamento.pdb
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\ControlzEx.dll
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\ControlzEx.pdb
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\ControlzEx.xml
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.exe
+C:\Users\ndduser\Downloads\Projeto-Banco-master (4)\Projeto-Banco-master\Treinamento\obj\Debug\Treinamento.pdb

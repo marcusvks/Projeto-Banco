@@ -14,17 +14,18 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Digite o numero da conta bancaria");
             string NumContaBancaria = Console.ReadLine();
 
-            Console.WriteLine("Selecione a agencia digitando o numero do seu ID \n");
             _agenciaView.FormataListaAgencias(_agenciaDao);
 
+            Console.WriteLine("Selecione a agencia digitando o numero do seu ID \n");
             int agenciaId = Convert.ToInt16(Console.ReadLine());
 
             Agencia retornoAgencia = _agenciaDao.BuscaAgenciaPorId(agenciaId);
 
             if (retornoAgencia != null)
-            {
-                Console.WriteLine("Informe o dono da conta pelo ID:");
+            {                
                 _pessoaView.FormataListaDadosPessoa(_pessoaDao);
+
+                Console.WriteLine("\n Informe o dono da conta pelo ID:");
 
                 int idDonoDaConta = Convert.ToInt16(Console.ReadLine());
 

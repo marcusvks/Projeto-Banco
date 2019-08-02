@@ -9,15 +9,15 @@ namespace Treinamento
 {
     public class Pessoa
     {
-        public int Id { get; set; }
-        public string Nome { get; private set; }
-        public string TipoPessoa { get; private set; }
-        public string Cpf { get; private set; }
-        public string Cnpj { get; private set; }
-        public string NomeCidade { get; private set; }
-        public string DataNasc{ get; private set; }
-        public int NumeroEndereco { get; private set; }
-        public string Uf { get; private set; }
+        public int Id { get;  set; }
+        public string Nome { get; protected set; }
+        public string TipoPessoa { get; protected set; }
+        public string Cpf { get; protected set; }
+        public string Cnpj { get; protected set; }
+        public string NomeCidade { get; protected set; }
+        public string DataNasc{ get; protected set; }
+        public int NumeroEndereco { get; protected set; }
+        public string Uf { get; protected set; }
 
         public Pessoa(string nome, string nomecidade, string datanasc, int numendereco, string tipopessoa, string estado, string cpfCnpj, PessoaDao ultimoId)
         {

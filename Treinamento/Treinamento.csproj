@@ -53,7 +53,9 @@
     <Compile Include="1 - VIEW\ViewContaBancaria.cs" />
     <Compile Include="1 - VIEW\ViewMenu.cs" />
     <Compile Include="1 - VIEW\ViewPessoa.cs" />
+    <Compile Include="1 - VIEW\ViewRelatorio.cs" />
     <Compile Include="2 - MODEL\Agencia.cs" />
+    <Compile Include="2 - MODEL\Funcionario.cs" />
     <Compile Include="3 - DAO\AgenciaDao.cs" />
     <Compile Include="2 - MODEL\ContaBancaria.cs" />
     <Compile Include="3 - DAO\ContaBancariaDao.cs" />

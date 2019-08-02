@@ -48,10 +48,6 @@ namespace Treinamento._1___VIEW
                     $" \n Cidade: {pessoa.NomeCidade} \n DataNascimento: {pessoa.DataNasc} " +
                     $"\n NumEndereço: {pessoa.NumeroEndereco} \n Tipo de Pessoa: {pessoa.TipoPessoa}");
             }
-
-            Console.WriteLine("\n Pressione qualquer tecla para voltar ao menu inicial");
-            Console.ReadKey();
-            Console.Clear();
         }
 
         public string PedeCpfOuCnpj(ref string _cpfCnpj)

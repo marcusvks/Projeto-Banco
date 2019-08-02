@@ -12,7 +12,7 @@ namespace Treinamento
 
         public void CadastraPessoas(Pessoa pessoa)
         {
-            pessoa.Id = (PegaUltimoId()+1);
+            pessoa.Id = PegaUltimoId()+1;
             listaDePessoas.Add(pessoa);
         }
 
