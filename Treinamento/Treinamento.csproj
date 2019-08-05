@@ -51,17 +51,22 @@
   <ItemGroup>
     <Compile Include="1 - VIEW\ViewAgencia.cs" />
     <Compile Include="1 - VIEW\ViewContaBancaria.cs" />
+    <Compile Include="1 - VIEW\ViewDeposito.cs" />
     <Compile Include="1 - VIEW\ViewMenu.cs" />
     <Compile Include="1 - VIEW\ViewPessoa.cs" />
-    <Compile Include="1 - VIEW\ViewRelatorio.cs" />
+    <Compile Include="1 - VIEW\ViewRelatorioOperacoes.cs" />
+    <Compile Include="1 - VIEW\ViewSaque.cs" />
+    <Compile Include="1 - VIEW\ViewTransferencia.cs" />
     <Compile Include="2 - MODEL\Agencia.cs" />
     <Compile Include="2 - MODEL\Funcionario.cs" />
+    <Compile Include="2 - MODEL\Operacao.cs" />
     <Compile Include="3 - DAO\AgenciaDao.cs" />
     <Compile Include="2 - MODEL\ContaBancaria.cs" />
     <Compile Include="3 - DAO\ContaBancariaDao.cs" />
     <Compile Include="2 - MODEL\Pessoa.cs" />
     <Compile Include="3 - DAO\PessoaDao.cs" />
     <Compile Include="1 - VIEW\Program.cs" />
+    <Compile Include="3 - DAO\RelatorioOperacaoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="4 - UTIL\ValidadorDeDocumento.cs" />
   </ItemGroup>

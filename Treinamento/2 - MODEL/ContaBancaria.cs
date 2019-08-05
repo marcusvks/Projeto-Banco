@@ -25,17 +25,12 @@ namespace Treinamento
 
         public void Saque(double quantia)
         {
-
+            Saldo -= quantia;
         }
 
         public void Deposito(double quantia)
         {
-
-        }
-
-        public void Transferencia(ContaBancaria conta1, ContaBancaria conta2)
-        {
-
+            Saldo += quantia;
         }
     }
 }
