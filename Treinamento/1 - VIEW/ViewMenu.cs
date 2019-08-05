@@ -19,6 +19,7 @@ namespace Treinamento._1___VIEW
         private static ViewDeposito _viewDeposito = new ViewDeposito();
         private static ViewTransferencia _viewTransferencia = new ViewTransferencia();
         private static ViewContaBancaria _viewConta = new ViewContaBancaria();
+        private static ViewRelatorioOperacoes _viewRelatorio = new ViewRelatorioOperacoes();
         //model
         private Operacao _operacao = new Operacao();
         //dao
@@ -69,6 +70,10 @@ namespace Treinamento._1___VIEW
                     case ConsoleKey.F8:
                         Console.Clear();
                         _viewTransferencia.RealizaTransferencia(_viewConta, _operacao, _relatorioDao, _contaDao);
+                        break;
+                    case ConsoleKey.F9:
+                        Console.Clear();
+                        _viewRelatorio.VisualizaRelatorioDeOperacoes(_relatorioDao);
                         break;
                     case ConsoleKey.F10:
                         Console.Clear();
