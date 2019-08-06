@@ -19,7 +19,7 @@ namespace Treinamento
         public int NumeroEndereco { get; protected set; }
         public string Uf { get; protected set; }
 
-        public Pessoa(string nome, string nomecidade, string datanasc, int numendereco, string tipopessoa, string estado, string cpfCnpj, PessoaDao ultimoId)
+        public Pessoa(string nome, string nomecidade, string datanasc, int numendereco, string tipopessoa, string estado, string cpfCnpj)
         {
             Nome = nome;
             DataNasc = datanasc;

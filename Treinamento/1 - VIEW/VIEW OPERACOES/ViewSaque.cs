@@ -10,7 +10,7 @@ namespace Treinamento._1___VIEW
 {
     public class ViewSaque
     {
-        public void RealizaSaque(Operacao operacao, RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao, ViewContaBancaria viewConta)
+        public void RealizaSaque(RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao, ViewContaBancaria viewConta)
         {
             Console.Clear();
 
@@ -21,8 +21,7 @@ namespace Treinamento._1___VIEW
 
             if (contaOrigem != null)
             {
-                Console.WriteLine("\nConfirme os dados: \n");
-                viewConta.FormataListaContaBancaria(contaDao);
+                Operacao operacao = new Operacao();
 
                 Console.WriteLine("\nInforme o valor a ser sacado:\n");
                 double valor = Convert.ToDouble(Console.ReadLine());
@@ -34,7 +33,7 @@ namespace Treinamento._1___VIEW
                 else
                 {
                     contaOrigem.Saque(valor);
-                    operacao.RealizaOperacao(contaOrigem, contaOrigem, 2);
+                    operacao.RealizaOperacao(contaOrigem, contaOrigem, 2, valor);
 
                     relatorioDao.AdicionaNovaOperacao(operacao);
 

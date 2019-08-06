@@ -9,7 +9,8 @@
                 return "cpf";
 
             }
-            else if (CpfCnpj.Length == 13)
+
+            if (CpfCnpj.Length == 13)
             {
 
                 return "cnpj";

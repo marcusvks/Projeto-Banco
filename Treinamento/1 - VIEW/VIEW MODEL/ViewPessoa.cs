@@ -28,7 +28,7 @@ namespace Treinamento._1___VIEW
         
             string _tipoPessoa = PedeCpfOuCnpj(ref _cpfCnpj);
 
-            novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj, _pessoaDao);
+            novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj);
             _pessoaDao.CadastraPessoas(novapessoa);
 
             Console.Clear();

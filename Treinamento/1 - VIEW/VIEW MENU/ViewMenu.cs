@@ -20,8 +20,7 @@ namespace Treinamento._1___VIEW
         private static ViewTransferencia _viewTransferencia = new ViewTransferencia();
         private static ViewContaBancaria _viewConta = new ViewContaBancaria();
         private static ViewRelatorioOperacoes _viewRelatorio = new ViewRelatorioOperacoes();
-        //model
-        private Operacao _operacao = new Operacao();
+
         //dao
         private ContaBancariaDao _contaDao = new ContaBancariaDao();
         private AgenciaDao _agenciaDao = new AgenciaDao();
@@ -35,7 +34,7 @@ namespace Treinamento._1___VIEW
 
             do
             {
-                Console.WriteLine("\n PRESSIONE: \n\n F1 para cadastrar uma pessoa fisica ou jurídica \n F2 para cadastrar uma conta bancaria \n F3 para cadastrar uma agencia \n F4 para listar as pessoas \n F5 para listar as agencias \n F6 para fazer um saque \n F7 para fazer um deposito \n F8 para fazer uma transferencia \n F9 para gerar relatorio de operacoes \n F10 para consultar seu saldo \n F12 para sair");
+                Console.WriteLine("\n PRESSIONE: \n\n F1 Para operacoes com Pessoa \n F2 Para operacoes com Conta Bancaria \n F3 Para operacoes com Agencia \n F4 Para operacoes com Funcionario \n F5 para listar as Operacoes \n F12 para sair");
                 _opcao = Console.ReadKey();
                 switch (_opcao.Key)
                 {
@@ -61,15 +60,15 @@ namespace Treinamento._1___VIEW
                         break;
                     case ConsoleKey.F6:
                         Console.Clear();
-                        _viewSaque.RealizaSaque(_operacao, _relatorioDao, _contaDao, _viewConta);
+                        _viewSaque.RealizaSaque(_relatorioDao, _contaDao, _viewConta);
                         break;
                     case ConsoleKey.F7:
                         Console.Clear();
-                        _viewDeposito.RealizaDeposito(_contaDao, _viewConta, _operacao, _relatorioDao);
+                        _viewDeposito.RealizaDeposito(_contaDao, _viewConta, _relatorioDao);
                         break;
                     case ConsoleKey.F8:
                         Console.Clear();
-                        _viewTransferencia.RealizaTransferencia(_viewConta, _operacao, _relatorioDao, _contaDao);
+                        _viewTransferencia.RealizaTransferencia(_viewConta, _relatorioDao, _contaDao);
                         break;
                     case ConsoleKey.F9:
                         Console.Clear();

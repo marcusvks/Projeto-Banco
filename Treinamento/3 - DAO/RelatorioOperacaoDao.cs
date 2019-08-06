@@ -13,12 +13,22 @@ namespace Treinamento._3___DAO
 
         public void AdicionaNovaOperacao(Operacao operacao)
         {
+            operacao.Id = PegaUltimoId() + 1;
             _listaOperacoes.Add(operacao);
         }
 
         public List<Operacao> RetornaOperacoes()
         {
             return _listaOperacoes;
+        }
+        public int PegaUltimoId()
+        {
+            Operacao ultimoId = _listaOperacoes.LastOrDefault();
+
+            if (ultimoId != null)
+                return ultimoId.Id;
+
+            return 0;
         }
     }
 }
