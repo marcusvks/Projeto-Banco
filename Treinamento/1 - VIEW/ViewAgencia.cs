@@ -33,11 +33,20 @@ namespace Treinamento._1___VIEW
         {
             Console.Clear();
 
-            foreach (var agencia in _agenciaDao.ListaAgencias())
+            if (_agenciaDao.ListaAgencias().Count != 0)
             {
-                Console.WriteLine("\n ID: {0} Nome: {1} Codigo: {2} Cidade: {3} Estado: {4} \n",
-                    agencia.Id, agencia.Nome, agencia.Codigo, agencia.NomeCidade, agencia.Uf);
+                foreach (var agencia in _agenciaDao.ListaAgencias())
+                {
+                    Console.WriteLine("\n ID: {0} Nome: {1} Codigo: {2} Cidade: {3} Estado: {4} \n",
+                        agencia.Id, agencia.Nome, agencia.Codigo, agencia.NomeCidade, agencia.Uf);
+                }
             }
+            else
+            {
+                Console.WriteLine("Não foi encontrado nenhuma agencia cadastrada");
+            }
+
+
         }
     }
 }

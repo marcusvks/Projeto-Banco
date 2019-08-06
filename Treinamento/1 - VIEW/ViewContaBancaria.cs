@@ -54,11 +54,19 @@ namespace Treinamento._1___VIEW
         {
             Console.Clear();
 
-            foreach (var conta in contaDao.ListaContaBancarias())
+            if (contaDao.ListaContaBancarias().Count != 0)
             {
-                Console.WriteLine($"\nID: {conta.Id}" +
-                    $" \n Conta: {conta.Conta} \n Agencia: {conta.Agencia.Nome} \n Dono da Conta: {conta.DonoDaConta.Nome}");
+                foreach (var conta in contaDao.ListaContaBancarias())
+                {
+                    Console.WriteLine($"\nID: {conta.Id}" +
+                        $" \n Conta: {conta.Conta} \n Agencia: {conta.Agencia.Nome} \n Dono da Conta: {conta.DonoDaConta.Nome}");
+                }
             }
+            else
+            {
+                Console.WriteLine("Não foi encontrado nenhuma conta bancaria");
+            }
+
         }
     }
 }

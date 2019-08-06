@@ -5,7 +5,7 @@ namespace Treinamento._1___VIEW
     public class ViewPessoa
     {
 
-        public void CadastraPessoa(PessoaDao _pessoaDao)
+        public virtual void CadastraPessoa(PessoaDao _pessoaDao)
         {
             Pessoa novapessoa;
 
@@ -41,13 +41,21 @@ namespace Treinamento._1___VIEW
         {
             Console.Clear();
 
-            foreach (var pessoa in pessoaDao.ListaPessoas())
+            if (pessoaDao.ListaPessoas().Count != 0)
             {
-                Console.WriteLine($"\nID: {pessoa.Id}" +
-                    $" \n Nome: {pessoa.Nome} \n Cpf: {pessoa.Cpf} \n Cnpj: {pessoa.Cnpj}" +
-                    $" \n Cidade: {pessoa.NomeCidade} \n DataNascimento: {pessoa.DataNasc} " +
-                    $"\n NumEndereço: {pessoa.NumeroEndereco} \n Tipo de Pessoa: {pessoa.TipoPessoa}");
+                foreach (var pessoa in pessoaDao.ListaPessoas())
+                {
+                    Console.WriteLine($"\nID: {pessoa.Id}" +
+                        $" \n Nome: {pessoa.Nome} \n Cpf: {pessoa.Cpf} \n Cnpj: {pessoa.Cnpj}" +
+                        $" \n Cidade: {pessoa.NomeCidade} \n DataNascimento: {pessoa.DataNasc} " +
+                        $"\n NumEndereço: {pessoa.NumeroEndereco} \n Tipo de Pessoa: {pessoa.TipoPessoa}");
+                }
             }
+            else
+            {
+                Console.WriteLine("\n Nao foi encontrado nenhuma pessoa cadastrada");
+            }
+
         }
 
         public string PedeCpfOuCnpj(ref string _cpfCnpj)
@@ -73,7 +81,7 @@ namespace Treinamento._1___VIEW
 
         }
 
-        private string LerCPFCNPJ()
+        protected string LerCPFCNPJ()
         {
             string _cpfCnpj;
             Console.WriteLine("\nDigite seu CPJ ou CNPJ: \n");
