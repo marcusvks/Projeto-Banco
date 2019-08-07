@@ -101,3 +101,16 @@ C:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInpu
 C:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
 C:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.exe
 C:\GitHub\Projeto-Banco\Treinamento\obj\Debug\Treinamento.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csprojAssemblyReference.cache
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInputs.cache
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.exe
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\Treinamento.exe.config
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\Treinamento.exe
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\Treinamento.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.dll
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.pdb
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.xml
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Projetos\TreinamentoBank\Projeto-Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete

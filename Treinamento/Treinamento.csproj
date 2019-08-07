@@ -49,15 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1 - VIEW\ViewAgencia.cs" />
-    <Compile Include="1 - VIEW\ViewContaBancaria.cs" />
-    <Compile Include="1 - VIEW\ViewDeposito.cs" />
-    <Compile Include="1 - VIEW\ViewFuncionario.cs" />
-    <Compile Include="1 - VIEW\ViewMenu.cs" />
-    <Compile Include="1 - VIEW\ViewPessoa.cs" />
-    <Compile Include="1 - VIEW\ViewRelatorioOperacoes.cs" />
-    <Compile Include="1 - VIEW\ViewSaque.cs" />
-    <Compile Include="1 - VIEW\ViewTransferencia.cs" />
+    <Compile Include="1 - VIEW\BASE\DataBase.cs" />
+    <Compile Include="1 - VIEW\VIEW MENU\ViewMenu.cs" />
+    <Compile Include="1 - VIEW\VIEW MENU\ViewMenuAgencia.cs" />
+    <Compile Include="1 - VIEW\VIEW MENU\ViewMenuConta.cs" />
+    <Compile Include="1 - VIEW\VIEW MENU\ViewMenuFuncionario.cs" />
+    <Compile Include="1 - VIEW\VIEW MENU\ViewMenuOperacoes.cs" />
+    <Compile Include="1 - VIEW\VIEW MENU\ViewMenuPessoa.cs" />
+    <Compile Include="1 - VIEW\VIEW MODEL\ViewAgencia.cs" />
+    <Compile Include="1 - VIEW\VIEW MODEL\ViewContaBancaria.cs" />
+    <Compile Include="1 - VIEW\VIEW MODEL\ViewFuncionario.cs" />
+    <Compile Include="1 - VIEW\VIEW MODEL\ViewPessoa.cs" />
+    <Compile Include="1 - VIEW\VIEW OPERACOES\ViewDeposito.cs" />
+    <Compile Include="1 - VIEW\VIEW OPERACOES\ViewRelatorioOperacoes.cs" />
+    <Compile Include="1 - VIEW\VIEW OPERACOES\ViewSaque.cs" />
+    <Compile Include="1 - VIEW\VIEW OPERACOES\ViewTransferencia.cs" />
     <Compile Include="2 - MODEL\Agencia.cs" />
     <Compile Include="2 - MODEL\Funcionario.cs" />
     <Compile Include="2 - MODEL\Operacao.cs" />
