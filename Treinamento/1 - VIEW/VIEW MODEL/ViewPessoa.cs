@@ -50,10 +50,16 @@ namespace Treinamento._1___VIEW
                         $" \n Cidade: {pessoa.NomeCidade} \n DataNascimento: {pessoa.DataNasc} " +
                         $"\n NumEndereço: {pessoa.NumeroEndereco} \n Tipo de Pessoa: {pessoa.TipoPessoa}");
                 }
+                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
-                Console.WriteLine("\n Nao foi encontrado nenhuma pessoa cadastrada");
+                Console.WriteLine("\nNao foi encontrado nenhuma pessoa cadastrada\n");
+                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
+                Console.ReadKey();
+                Console.Clear();
             }
 
         }
