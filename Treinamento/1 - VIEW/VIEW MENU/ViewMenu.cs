@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Treinamento._1___VIEW.BASE;
 using Treinamento._1___VIEW.VIEW_MENU;
-using Treinamento._2___MODEL;
 using Treinamento._3___DAO;
 
 namespace Treinamento._1___VIEW
@@ -35,16 +35,16 @@ namespace Treinamento._1___VIEW
         private PessoaDao _pessoaDao = new PessoaDao();
         private RelatorioOperacaoDao _relatorioDao = new RelatorioOperacaoDao();
         private FuncionarioDao _funcionarioDao = new FuncionarioDao();
+
         public ViewMenu()
         {
             DataBase.CadastrarPessoasFisicas(_pessoaDao, 10);
+            DataBase.CadastraAgencias(_agenciaDao, 3);
         }
-
+        
         public void IniciaMenu()
         {
             Console.Clear();
-
-            Console.WriteLine("\n É PRECISO PRIMEIRO TER PESSOA E AGENCIA PRA FUNGA - 1 é operacao de Deposito, 2 de Saque, 3 de Transferencia \n");
 
             do
             {

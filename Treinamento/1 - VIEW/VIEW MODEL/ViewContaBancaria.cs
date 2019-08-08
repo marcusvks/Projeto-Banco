@@ -61,10 +61,17 @@ namespace Treinamento._1___VIEW
                     Console.WriteLine($"\nID: {conta.Id}" +
                         $" \n Conta: {conta.Conta} \n Agencia: {conta.Agencia.Nome} \n Dono da Conta: {conta.DonoDaConta.Nome}");
                 }
+
+                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
-                Console.WriteLine("Não foi encontrado nenhuma conta bancaria");
+                Console.WriteLine("\nNão foi encontrado nenhuma conta bancaria\n");
+                Console.WriteLine("Pressione qualquer tecla para voltar ao menu principal");
+                Console.ReadKey();
+                Console.Clear();
             }
 
         }

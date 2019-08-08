@@ -13,6 +13,19 @@ namespace Treinamento._1___VIEW.BASE
             return new Pessoa(nome, "Cidade", DateTime.Now.AddYears(-27).ToString(), 12, tipo, "SC", "07846379976");
         }
 
+        public static Agencia agencia(string nome)
+        {
+            return new Agencia("7", nome, "Lages", "SC");
+        }
+
+        public static void CadastraAgencias(AgenciaDao agenciaDao, int quantidade)
+        {
+            for (int i = 0; i < quantidade; i++)
+            {
+                agenciaDao.CadastraAgencia(agencia("Agencia - "+i));
+            }
+        }
+
         public static void CadastrarPessoasFisicas(PessoaDao pessoaDao,int quantidade)
         {
             for (int i = 0; i < quantidade; i++)

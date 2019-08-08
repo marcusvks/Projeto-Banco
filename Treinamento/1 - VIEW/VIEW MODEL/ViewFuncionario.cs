@@ -61,6 +61,10 @@ namespace Treinamento._1___VIEW
                         $" \n Cidade: {funcionario.NomeCidade} \n DataNascimento: {funcionario.DataNasc} " +
                         $"\n NumEndereço: {funcionario.NumeroEndereco} \n Funcao do Funcionario: {funcionario.Funcao} \n Salario do Funcionario: {funcionario.Salario}");
                 }
+
+                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
