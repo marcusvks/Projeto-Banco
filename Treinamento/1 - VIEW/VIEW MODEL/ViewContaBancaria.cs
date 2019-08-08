@@ -68,5 +68,13 @@ namespace Treinamento._1___VIEW
             }
 
         }
+        public void MostraSaldo(ContaBancariaDao contaDao)
+        {
+            Console.WriteLine("\nInforme o Id da conta para verificar o saldo");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\n O saldo desta conta é: {0}", contaDao.BuscaContaPorId(id).Saldo);
+
+        }
     }
 }
