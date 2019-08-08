@@ -1,11 +1,19 @@
 ﻿using System;
+using Treinamento._1___VIEW.VIEW_MODEL;
 
 namespace Treinamento._1___VIEW
 {
-    public class ViewPessoa
+    public class ViewPessoa : IViewModel<Pessoa>
     {
+        private PessoaDao _pessoaDao;
+        private Docs _docs = new Docs();
 
-        public virtual void CadastraPessoa(PessoaDao _pessoaDao)
+        public ViewPessoa(PessoaDao pessoaDao)
+        {
+            _pessoaDao = pessoaDao;
+        }
+
+        public virtual void CadastraDados()
         {
             Pessoa novapessoa;
 
@@ -24,12 +32,12 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Digite o numero do endereço");
             int numEndereco = Convert.ToInt32(Console.ReadLine());
          
-            string _cpfCnpj = LerCPFCNPJ();
+            string _cpfCnpj = _docs.LerCPFCNPJ();
         
-            string _tipoPessoa = PedeCpfOuCnpj(ref _cpfCnpj);
+            string _tipoPessoa = _docs.PedeCpfOuCnpj(ref _cpfCnpj);
 
             novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj);
-            _pessoaDao.CadastraPessoas(novapessoa);
+            _pessoaDao.CadastraDados(novapessoa);
 
             Console.Clear();
             Console.WriteLine("Pessoa cadastrada com sucesso \n Pressione qualquer tecla para voltar ao menu");
@@ -37,22 +45,19 @@ namespace Treinamento._1___VIEW
             Console.Clear();
         }
 
-        public void FormataListaDadosPessoa(PessoaDao pessoaDao)
+        public void ListaEFormata()
         {
             Console.Clear();
 
-            if (pessoaDao.ListaPessoas().Count != 0)
+            if (_pessoaDao.ListaDados().Count != 0)
             {
-                foreach (var pessoa in pessoaDao.ListaPessoas())
+                foreach (var pessoa in _pessoaDao.ListaDados())
                 {
                     Console.WriteLine($"\nID: {pessoa.Id}" +
                         $" \n Nome: {pessoa.Nome} \n Cpf: {pessoa.Cpf} \n Cnpj: {pessoa.Cnpj}" +
                         $" \n Cidade: {pessoa.NomeCidade} \n DataNascimento: {pessoa.DataNasc} " +
                         $"\n NumEndereço: {pessoa.NumeroEndereco} \n Tipo de Pessoa: {pessoa.TipoPessoa}");
                 }
-                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
-                Console.ReadKey();
-                Console.Clear();
             }
             else
             {
@@ -62,37 +67,6 @@ namespace Treinamento._1___VIEW
                 Console.Clear();
             }
 
-        }
-
-        public string PedeCpfOuCnpj(ref string _cpfCnpj)
-        {
-            do
-            {
-                string RetornoValidacao = _cpfCnpj.ValidaCpfCnpj();
-
-                if (RetornoValidacao == "cpf")
-                    return "Pessoa Fisica";
-
-                else if (RetornoValidacao == "cnpj")
-                    return "Pessoa Juridica";
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine("Cpf ou Cnpj invalido");
-                }
-
-                _cpfCnpj = LerCPFCNPJ();
-
-            } while (true);
-
-        }
-
-        public string LerCPFCNPJ()
-        {
-            string _cpfCnpj;
-            Console.WriteLine("\nDigite seu CPJ ou CNPJ: \n");
-            _cpfCnpj = Console.ReadLine();
-            return _cpfCnpj;
         }
     }
 }

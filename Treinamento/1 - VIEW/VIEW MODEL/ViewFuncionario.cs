@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Treinamento._1___VIEW.VIEW_MODEL;
 using Treinamento._2___MODEL;
 using Treinamento._3___DAO;
 
 namespace Treinamento._1___VIEW
 {
-    public class ViewFuncionario : ViewPessoa
+    public class ViewFuncionario : IViewModel<Funcionario>
     {
-        public void CadastraFuncionario(FuncionarioDao _funcionarioDao)
+        private FuncionarioDao _funcionarioDao;
+        private Docs _docs = new Docs();
+
+        public ViewFuncionario(FuncionarioDao funcionarioDao)
+        {
+            _funcionarioDao = funcionarioDao;
+        }
+
+        public void CadastraDados()
         {
             Funcionario novoFuncionario;
 
@@ -35,12 +44,12 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Digite o salario do funcionario");
             double salario = Convert.ToDouble(Console.ReadLine());
 
-            string _cpfCnpj = LerCPFCNPJ();
+            string _cpfCnpj = _docs.LerCPFCNPJ();
 
-            string _tipoPessoa = PedeCpfOuCnpj(ref _cpfCnpj);
+            string _tipoPessoa = _docs.PedeCpfOuCnpj(ref _cpfCnpj);
 
             novoFuncionario = new Funcionario(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj, funcao, salario);
-            _funcionarioDao.CadastraFuncionarios(novoFuncionario);
+            _funcionarioDao.CadastraDados(novoFuncionario);
 
             Console.Clear();
             Console.WriteLine("Funcionario cadastrado com sucesso \n Pressione qualquer tecla para voltar ao menu");
@@ -48,23 +57,19 @@ namespace Treinamento._1___VIEW
             Console.Clear();
         }
 
-        public void FormataListaDadosFuncionario(FuncionarioDao funcionarioDao)
+        public void ListaEFormata()
         {
             Console.Clear();
 
-            if (funcionarioDao.ListaFuncionarios().Count != 0)
+            if (_funcionarioDao.ListaDados().Count != 0)
             {
-                foreach (var funcionario in funcionarioDao.ListaFuncionarios())
+                foreach (var funcionario in _funcionarioDao.ListaDados())
                 {
                     Console.WriteLine($"\nID: {funcionario.Id}" +
                         $" \n Nome: {funcionario.Nome} \n Cpf: {funcionario.Cpf} \n Cnpj: {funcionario.Cnpj}" +
                         $" \n Cidade: {funcionario.NomeCidade} \n DataNascimento: {funcionario.DataNasc} " +
                         $"\n NumEndereço: {funcionario.NumeroEndereco} \n Funcao do Funcionario: {funcionario.Funcao} \n Salario do Funcionario: {funcionario.Salario}");
                 }
-
-                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
-                Console.ReadKey();
-                Console.Clear();
             }
             else
             {

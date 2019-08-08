@@ -14,15 +14,15 @@ namespace Treinamento._1___VIEW
     {
         private static ConsoleKeyInfo _opcao;
         //view
-        private static ViewAgencia _viewAgencia = new ViewAgencia();
-        private static ViewContaBancaria _viewContaBancaria = new ViewContaBancaria();
-        private static ViewPessoa _viewPessoa = new ViewPessoa();
+        private static ViewAgencia _viewAgencia = new ViewAgencia(_agenciaDao);
+        private static ViewContaBancaria _viewContaBancaria = new ViewContaBancaria(_contaDao, _pessoaDao, _agenciaDao, _viewPessoa, _viewAgencia);
+        private static ViewPessoa _viewPessoa = new ViewPessoa(_pessoaDao);
         private static ViewSaque _viewSaque = new ViewSaque();
         private static ViewDeposito _viewDeposito = new ViewDeposito();
         private static ViewTransferencia _viewTransferencia = new ViewTransferencia();
-        private static ViewContaBancaria _viewConta = new ViewContaBancaria();
+        private static ViewContaBancaria _viewConta = new ViewContaBancaria(_contaDao, _pessoaDao, _agenciaDao, _viewPessoa, _viewAgencia);
         private static ViewRelatorioOperacoes _viewRelatorio = new ViewRelatorioOperacoes();
-        private static ViewFuncionario _viewFuncionario = new ViewFuncionario();
+        private static ViewFuncionario _viewFuncionario = new ViewFuncionario(_funcionarioDao);
         //View Menu
         private static ViewMenuAgencia _viewMenuAgencia = new ViewMenuAgencia();
         private static ViewMenuConta _viewMenuConta = new ViewMenuConta();
@@ -30,10 +30,11 @@ namespace Treinamento._1___VIEW
         private static ViewMenuPessoa _viewMenuPessoa = new ViewMenuPessoa();
         private static ViewMenuOperacoes _viewMenuOperacoes = new ViewMenuOperacoes();
         //dao
-        private ContaBancariaDao _contaDao = new ContaBancariaDao();
-        private AgenciaDao _agenciaDao = new AgenciaDao();
-        private PessoaDao _pessoaDao = new PessoaDao();
-        private RelatorioOperacaoDao _relatorioDao = new RelatorioOperacaoDao();
+        private static ContaBancariaDao _contaDao = new ContaBancariaDao();
+        private static AgenciaDao _agenciaDao = new AgenciaDao();
+        private static PessoaDao _pessoaDao = new PessoaDao();
+        private static RelatorioOperacaoDao _relatorioDao = new RelatorioOperacaoDao();
+        private static FuncionarioDao _funcionarioDao = new FuncionarioDao();
 
         public ViewMenu()
         {

@@ -19,12 +19,12 @@ namespace Treinamento._1___VIEW
             {
                 case ConsoleKey.F1:
                     Console.Clear();
-                    viewAgencia.CadastraAgencia(agenciaDao);
+                    viewAgencia.CadastraDados();
                     break;
 
                 case ConsoleKey.F2:
                     Console.Clear();
-                    viewAgencia.FormataListaAgencias(agenciaDao);
+                    viewAgencia.ListaEFormata();
                     break;
 
                 case ConsoleKey.F12:

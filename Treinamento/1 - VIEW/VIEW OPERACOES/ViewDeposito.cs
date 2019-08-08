@@ -13,7 +13,7 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Informe o ID da sua conta");
             int IdContaOrigem = Convert.ToInt32(Console.ReadLine());
 
-            ContaBancaria contaOrigem = contaDao.BuscaContaPorId(IdContaOrigem);
+            ContaBancaria contaOrigem = contaDao.BuscaPorId(IdContaOrigem);
 
             if (contaOrigem != null)
             {
@@ -22,12 +22,12 @@ namespace Treinamento._1___VIEW
                 Console.WriteLine("Informe o ID da conta bancaria a qual irá receber o deposito:\n");
                 int IdContaMovimentada = Convert.ToInt32(Console.ReadLine());
 
-                ContaBancaria contaMovimentada = contaDao.BuscaContaPorId(IdContaMovimentada);
+                ContaBancaria contaMovimentada = contaDao.BuscaPorId(IdContaMovimentada);
 
                 if (contaMovimentada != null)
                 {
                     Console.WriteLine("\nConfirme os dados: \n");
-                    viewConta.FormataListaContaBancaria(contaDao);
+                    viewConta.ListaEFormata();
 
                     Console.WriteLine("\nInforme o valor a ser depositado: ");
                     double ValorDeposito = Convert.ToDouble(Console.ReadLine());
@@ -50,9 +50,6 @@ namespace Treinamento._1___VIEW
             {
                 Console.WriteLine("Conta nao encontrada");
             }
-
-
-
         }
     }
 }

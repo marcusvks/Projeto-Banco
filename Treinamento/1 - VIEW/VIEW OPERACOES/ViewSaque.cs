@@ -17,7 +17,7 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Informe o ID da sua conta bancaria");
             int IdConta = Convert.ToInt32(Console.ReadLine());
 
-            ContaBancaria contaOrigem = contaDao.BuscaContaPorId(IdConta);
+            ContaBancaria contaOrigem = contaDao.BuscaPorId(IdConta);
 
             if (contaOrigem != null)
             {

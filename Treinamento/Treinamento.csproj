@@ -49,13 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1 - VIEW\BASE\DataBase.cs" />
     <Compile Include="1 - VIEW\VIEW MENU\ViewMenu.cs" />
     <Compile Include="1 - VIEW\VIEW MENU\ViewMenuAgencia.cs" />
     <Compile Include="1 - VIEW\VIEW MENU\ViewMenuConta.cs" />
     <Compile Include="1 - VIEW\VIEW MENU\ViewMenuFuncionario.cs" />
     <Compile Include="1 - VIEW\VIEW MENU\ViewMenuOperacoes.cs" />
     <Compile Include="1 - VIEW\VIEW MENU\ViewMenuPessoa.cs" />
+    <Compile Include="1 - VIEW\VIEW MODEL\Docs.cs" />
+    <Compile Include="1 - VIEW\VIEW MODEL\Interface\IViewModel.cs" />
     <Compile Include="1 - VIEW\VIEW MODEL\ViewAgencia.cs" />
     <Compile Include="1 - VIEW\VIEW MODEL\ViewContaBancaria.cs" />
     <Compile Include="1 - VIEW\VIEW MODEL\ViewFuncionario.cs" />
@@ -72,9 +73,11 @@
     <Compile Include="3 - DAO\ContaBancariaDao.cs" />
     <Compile Include="2 - MODEL\Pessoa.cs" />
     <Compile Include="3 - DAO\FuncionarioDao.cs" />
+    <Compile Include="3 - DAO\Interface\IDao.cs" />
     <Compile Include="3 - DAO\PessoaDao.cs" />
     <Compile Include="1 - VIEW\Program.cs" />
     <Compile Include="3 - DAO\RelatorioOperacaoDao.cs" />
+    <Compile Include="5 - BASE STARTER\DataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="4 - UTIL\ValidadorDeDocumento.cs" />
   </ItemGroup>
@@ -82,5 +85,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

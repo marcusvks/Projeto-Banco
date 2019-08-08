@@ -1,11 +1,18 @@
 ﻿using System;
+using Treinamento._1___VIEW.VIEW_MODEL;
 
 namespace Treinamento._1___VIEW
 {
-    public class ViewAgencia
+    public class ViewAgencia : IViewModel<Agencia>
     {
+        private AgenciaDao _agenciaDao;
 
-        public void CadastraAgencia(AgenciaDao _agenciaDao)
+        public ViewAgencia(AgenciaDao agenciaDao)
+        {
+            _agenciaDao = agenciaDao;
+        }
+
+        public void CadastraDados()
         {
             Console.WriteLine("Digite o codigo da agencia");
             string CodAgencia = Console.ReadLine();
@@ -21,7 +28,7 @@ namespace Treinamento._1___VIEW
 
             Agencia agencia = new Agencia(CodAgencia, NomeAgencia, NomeCidade, Estado);
 
-            _agenciaDao.CadastraAgencia(agencia);
+            _agenciaDao.CadastraDados(agencia);
 
             Console.Clear();
             Console.WriteLine("Agencia cadastrada com sucesso \n Pressione qualquer tecla para voltar ao menu");
@@ -29,28 +36,22 @@ namespace Treinamento._1___VIEW
             Console.Clear();
         }
 
-        public void FormataListaAgencias(AgenciaDao _agenciaDao)
+        public void ListaEFormata()
         {
             Console.Clear();
 
-            if (_agenciaDao.ListaAgencias().Count != 0)
+            if (_agenciaDao.ListaDados().Count != 0)
             {
-                foreach (var agencia in _agenciaDao.ListaAgencias())
+                foreach (var agencia in _agenciaDao.ListaDados())
                 {
                     Console.WriteLine("\nID: {0} \nNome: {1} \nCodigo: {2} \nCidade: {3} \nEstado: {4} \n",
                         agencia.Id, agencia.Nome, agencia.Codigo, agencia.NomeCidade, agencia.Uf);
                 }
-
-                Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal\n");
-                Console.ReadKey();
-                Console.Clear();
             }
             else
             {
                 Console.WriteLine("Não foi encontrado nenhuma agencia cadastrada");
             }
-
-
         }
     }
 }

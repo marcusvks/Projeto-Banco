@@ -3,28 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Treinamento._3___DAO;
 
 namespace Treinamento
 {
-    public class ContaBancariaDao
+    public class ContaBancariaDao : IDao<ContaBancaria>
     {
         private List<ContaBancaria> listaDeContaBancarias = new List<ContaBancaria>();
 
-        public void CadastraContaBancaria(ContaBancaria contaBancaria)
-        {
-            contaBancaria.Id = PegaUltimoId() + 1;
-            listaDeContaBancarias.Add(contaBancaria);
-        }
-
-        public List<ContaBancaria> ListaContaBancarias()
-        {
-            return listaDeContaBancarias;
-        }
-
-        public ContaBancaria BuscaContaPorId(int id)
-        {
-            return listaDeContaBancarias.Find(a => a.Id == id);
-        }
         public int PegaUltimoId()
         {
             ContaBancaria ultimoId = listaDeContaBancarias.LastOrDefault();
@@ -33,6 +19,22 @@ namespace Treinamento
                 return ultimoId.Id;
 
             return 0;
+        }
+
+        public void CadastraDados(ContaBancaria contaBancaria)
+        {
+            contaBancaria.Id = PegaUltimoId() + 1;
+            listaDeContaBancarias.Add(contaBancaria);
+        }
+
+        public List<ContaBancaria> ListaDados()
+        {
+            return listaDeContaBancarias;
+        }
+
+        public ContaBancaria BuscaPorId(int id)
+        {
+            return listaDeContaBancarias.Find(a => a.Id == id);
         }
     }
 }

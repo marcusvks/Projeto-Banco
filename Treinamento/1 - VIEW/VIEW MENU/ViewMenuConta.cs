@@ -20,7 +20,7 @@ namespace Treinamento._1___VIEW
             {
                 case ConsoleKey.F1:
                     Console.Clear();
-                    viewConta.CadastraContaBancaria(contaDao, pessoaDao, agenciaDao, viewPessoa, viewAgencia);
+                    viewConta.CadastraDados();
                     break;
 
                 case ConsoleKey.F2:

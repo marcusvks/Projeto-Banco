@@ -22,19 +22,19 @@ namespace Treinamento._1___VIEW.BASE
         {
             for (int i = 0; i < quantidade; i++)
             {
-                agenciaDao.CadastraAgencia(agencia("Agencia - "+i));
+                agenciaDao.CadastraDados(agencia("Agencia - "+i));
             }
         }
 
         public static void CadastrarPessoasFisicas(PessoaDao pessoaDao,int quantidade)
         {
             for (int i = 0; i < quantidade; i++)
-                pessoaDao.CadastraPessoas(pessoa("Pessoa - " + i, "FISICA"));
+                pessoaDao.CadastraDados(pessoa("Pessoa - " + i, "FISICA"));
         }
         public static void CadastrarPessoasJuridica(PessoaDao pessoaDao, int quantidade)
         {
             for (int i = 0; i < quantidade; i++)
-                pessoaDao.CadastraPessoas(pessoa("Pessoa - " + i, "JURIDICA"));
+                pessoaDao.CadastraDados(pessoa("Pessoa - " + i, "JURIDICA"));
         }
     }
 }

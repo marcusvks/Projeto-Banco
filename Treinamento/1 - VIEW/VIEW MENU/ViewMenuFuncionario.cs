@@ -20,12 +20,12 @@ namespace Treinamento._1___VIEW
             {
                 case ConsoleKey.F1:
                     Console.Clear();
-                    viewFuncionario.CadastraFuncionario(funcionarioDao);
+                    viewFuncionario.CadastraDados();
                     break;
 
                 case ConsoleKey.F2:
                     Console.Clear();
-                    viewFuncionario.FormataListaDadosFuncionario(funcionarioDao);
+                    viewFuncionario.ListaEFormata();
                     break;
 
                 case ConsoleKey.F12:

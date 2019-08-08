@@ -7,20 +7,9 @@ using Treinamento._2___MODEL;
 
 namespace Treinamento._3___DAO
 {
-    public class FuncionarioDao
+    public class FuncionarioDao : IDao<Funcionario>
     {
         private List<Funcionario> listaDeFuncionarios = new List<Funcionario>();
-
-        public void CadastraFuncionarios(Funcionario funcionario)
-        {
-            funcionario.Id = PegaUltimoId() + 1;
-            listaDeFuncionarios.Add(funcionario);
-        }
-
-        public List<Funcionario> ListaFuncionarios()
-        {
-            return listaDeFuncionarios;
-        }
 
         public Pessoa BuscaFuncionarioPorId(int id)
         {
@@ -41,6 +30,22 @@ namespace Treinamento._3___DAO
                 return ultimoId.Id;
 
             return 0;
+        }
+
+        public void CadastraDados(Funcionario funcionario)
+        {
+            funcionario.Id = PegaUltimoId() + 1;
+            listaDeFuncionarios.Add(funcionario);
+        }
+
+        public List<Funcionario> ListaDados()
+        {
+            return listaDeFuncionarios;
+        }
+
+        public Funcionario BuscaPorId(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

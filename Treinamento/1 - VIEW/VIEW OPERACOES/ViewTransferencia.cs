@@ -17,24 +17,24 @@ namespace Treinamento._1___VIEW
             Console.WriteLine("Informe o ID da sua conta bancaria");
             int IdContaOrigem = Convert.ToInt32(Console.ReadLine());
 
-            ContaBancaria contaOrigem = contaDao.BuscaContaPorId(IdContaOrigem);
+            ContaBancaria contaOrigem = contaDao.BuscaPorId(IdContaOrigem);
 
             if (contaOrigem != null)
             {
                 Operacao operacao = new Operacao();
 
                 Console.WriteLine("\nConfirme os dados: \n");
-                viewConta.FormataListaContaBancaria(contaDao);
+                viewConta.ListaEFormata();
 
                 Console.WriteLine("\nInforme o ID da conta bancaria que vai receber a transferencia");
                 int IdContaDestino = Convert.ToInt32(Console.ReadLine());
 
-                ContaBancaria contaMovimentada = contaDao.BuscaContaPorId(IdContaDestino);
+                ContaBancaria contaMovimentada = contaDao.BuscaPorId(IdContaDestino);
 
                 if (contaMovimentada != null)
                 {
                     Console.WriteLine("\nConfirme os dados: \n");
-                    viewConta.FormataListaContaBancaria(contaDao);
+                    viewConta.ListaEFormata();
 
                     Console.WriteLine("\nInforme o valor a ser transferido: ");
                     double ValorTransferencia = Convert.ToDouble(Console.ReadLine());
