@@ -44,8 +44,6 @@ namespace Treinamento._1___VIEW
         {
             Console.Clear();
 
-            Console.WriteLine("\n É PRECISO PRIMEIRO TER PESSOA E AGENCIA PRA FUNGA - 1 é operacao de Deposito, 2 de Saque, 3 de Transferencia \n");
-
             do
             {
                 Console.WriteLine("\n PRESSIONE: \n\n F1 Para operacoes com Pessoa \n F2 Para operacoes com Conta Bancaria \n F3 Para operacoes com Agencia \n F4 Para operacoes com Funcionario \n F5 Para fazer as Operacoes \n F12 para sair");

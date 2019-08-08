@@ -8,7 +8,7 @@ namespace Treinamento
 {
     public class Agencia
     {
-        public int Id { get; private set; }
+        public int Id { get;  set; }
         public string Codigo { get; private set; }
         public string Nome { get; private set; }
         public string NomeCidade { get; private set; }
