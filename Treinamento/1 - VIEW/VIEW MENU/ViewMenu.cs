@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Treinamento._1___VIEW.BASE;
 using Treinamento._1___VIEW.VIEW_MENU;
-using Treinamento._2___MODEL;
 using Treinamento._3___DAO;
 
 namespace Treinamento._1___VIEW
@@ -38,6 +37,7 @@ namespace Treinamento._1___VIEW
         public ViewMenu()
         {
             DataBase.CadastrarPessoasFisicas(_pessoaDao, 10);
+            DataBase.CadastraAgencias(_agenciaDao, 3);
         }
 
         public void IniciaMenu()
