@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Treinamento._1___VIEW.BASE;
 using Treinamento._1___VIEW.VIEW_MENU;
@@ -34,12 +35,13 @@ namespace Treinamento._1___VIEW
         private PessoaDao _pessoaDao = new PessoaDao();
         private RelatorioOperacaoDao _relatorioDao = new RelatorioOperacaoDao();
         private FuncionarioDao _funcionarioDao = new FuncionarioDao();
+
         public ViewMenu()
         {
             DataBase.CadastrarPessoasFisicas(_pessoaDao, 10);
             DataBase.CadastraAgencias(_agenciaDao, 3);
         }
-
+        
         public void IniciaMenu()
         {
             Console.Clear();
