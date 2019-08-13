@@ -9,10 +9,9 @@ namespace Treinamento._1___VIEW.VIEW_MENU
 {
     public class ViewMenuOperacoes
     {
-        public void StartMenuOperacoes(ViewContaBancaria viewConta, ViewRelatorioOperacoes viewRelatorioOperacoes,ViewTransferencia viewTransferencia, ViewDeposito viewDeposito,ViewSaque viewSaque, RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao)
+        public void StartMenuOperacoes(ViewContaBancaria viewConta, ViewRelatorioOperacoes viewRelatorioOperacoes, ViewMenu viewMenu, ViewTransferencia viewTransferencia, ViewDeposito viewDeposito,ViewSaque viewSaque, RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao)
         {
             ConsoleKeyInfo _opcao;
-            ViewMenu viewMenu = new ViewMenu();
 
             Console.WriteLine("\n PRESSIONE: \n\n F1 Para realizar um saque \n F2 Para fazer um deposito \n F3 Para fazer uma transferencia \n F4 Para exibir o relatorio de operacoes \n F12 para voltar ao menu principal");
             _opcao = Console.ReadKey();

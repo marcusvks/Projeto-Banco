@@ -8,11 +8,10 @@ namespace Treinamento._1___VIEW
 {
     public class ViewMenuAgencia
     {
-        public void IniciaMenuAgencia(ViewAgencia viewAgencia, AgenciaDao agenciaDao)
+        public void IniciaMenuAgencia(ViewAgencia viewAgencia, ViewMenu viewMenu, AgenciaDao agenciaDao)
         {
             ConsoleKeyInfo _opcao;
-            ViewMenu viewMenu = new ViewMenu();
-        
+            
             Console.WriteLine("\n PRESSIONE: \n\n F1 Para cadastrar uma agencia \n F2 Para mostrar todas as agencias \n F12 para voltar ao menu principal");
             _opcao = Console.ReadKey();
             switch (_opcao.Key)
