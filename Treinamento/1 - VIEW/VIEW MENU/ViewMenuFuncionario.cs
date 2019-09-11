@@ -9,10 +9,9 @@ namespace Treinamento._1___VIEW
 {
     public class ViewMenuFuncionario
     {
-        public void IniciaMenuFuncionario(FuncionarioDao funcionarioDao, ViewFuncionario viewFuncionario)
+        public void IniciaMenuFuncionario(FuncionarioDao funcionarioDao, ViewMenu viewMenu, ViewFuncionario viewFuncionario)
         {
             ConsoleKeyInfo _opcao;
-            ViewMenu viewMenu = new ViewMenu();
 
             Console.WriteLine("\n PRESSIONE: \n\n F1 Para cadastrar um Funcionario \n F2 Para mostrar todos os funcionarios \n F12 para voltar ao menu principal");
             _opcao = Console.ReadKey();

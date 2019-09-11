@@ -126,3 +126,4 @@ D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.pdb
 D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.xml
 D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
 D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
+D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csprojAssemblyReference.cache

@@ -8,10 +8,9 @@ namespace Treinamento._1___VIEW
 {
     public class ViewMenuPessoa
     {
-        public void StartMenuPessoa(ViewPessoa viewPessoa,PessoaDao pessoaDao)
+        public void StartMenuPessoa(ViewPessoa viewPessoa, ViewMenu viewMenu, PessoaDao pessoaDao)
         {
             ConsoleKeyInfo _opcao;
-            ViewMenu viewMenu = new ViewMenu();
 
             Console.WriteLine("\n PRESSIONE: \n\n F1 Para cadastrar uma pessoa \n F2 Para listar todas as pessoas \n F12 para voltar ao menu principal");
             _opcao = Console.ReadKey();

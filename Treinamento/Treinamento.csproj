@@ -83,6 +83,7 @@
     <Compile Include="3 - DAO\PessoaDao.cs" />
     <Compile Include="1 - VIEW\Program.cs" />
     <Compile Include="3 - DAO\RelatorioOperacaoDao.cs" />
+    <Compile Include="4 - UTIL\CriaListaCompleta.cs" />
     <Compile Include="5 - BASE STARTER\DataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="4 - UTIL\ValidadorDeDocumento.cs" />

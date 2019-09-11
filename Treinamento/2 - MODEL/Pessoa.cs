@@ -37,5 +37,11 @@ namespace Treinamento
             else
                 Cpf = cpfCnpj;
         }
+
+        public override string ToString()
+        {
+            return $"Id: {Id} Nome: {Nome} TipoPessoa: {TipoPessoa} Cpf: {Cpf} Cnpj: {Cnpj} NomeCidade: {NomeCidade}" +
+                $"DataNasc: {DataNasc} NumeroEndereco: {NumeroEndereco} Uf: {Uf}";
+        }
     }
 }
