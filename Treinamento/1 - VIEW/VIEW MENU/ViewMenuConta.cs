@@ -9,7 +9,7 @@ namespace Treinamento._1___VIEW
 {
     public class ViewMenuConta
     {
-        public void IniciaMenuConta(ViewContaBancaria viewConta, ViewPessoa viewPessoa, ViewAgencia viewAgencia, AgenciaDao agenciaDao, ContaBancariaDao contaDao, PessoaDao pessoaDao)
+        public void IniciaMenuConta(ViewContaBancaria viewConta, ViewPessoa viewPessoa, ViewAgencia viewAgencia, IDao<Agencia> agenciaDao, ContaBancariaDao contaDao, PessoaDao pessoaDao)
         {
             ConsoleKeyInfo _opcao;
             ViewMenu viewMenu = new ViewMenu();

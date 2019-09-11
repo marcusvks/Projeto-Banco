@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Treinamento._3___DAO;
 
 namespace Treinamento._1___VIEW.BASE
 {
@@ -18,7 +19,7 @@ namespace Treinamento._1___VIEW.BASE
             return new Agencia("7", nome, "Lages", "SC");
         }
 
-        public static void CadastraAgencias(AgenciaDao agenciaDao, int quantidade)
+        public static void CadastraAgencias(IDao<Agencia> agenciaDao, int quantidade)
         {
             for (int i = 0; i < quantidade; i++)
             {

@@ -7,6 +7,7 @@ using Treinamento._1___VIEW.BASE;
 using Treinamento._1___VIEW.VIEW_MENU;
 using Treinamento._2___MODEL;
 using Treinamento._3___DAO;
+using Treinamento._3___DAO.DAOSQL;
 
 namespace Treinamento._1___VIEW
 {
@@ -15,7 +16,7 @@ namespace Treinamento._1___VIEW
         private static ConsoleKeyInfo _opcao;
         //dao
         private static ContaBancariaDao _contaDao = new ContaBancariaDao();
-        private static AgenciaDao _agenciaDao = new AgenciaDao();
+        private static AgenciaDaoSql _agenciaDao = new AgenciaDaoSql();
         private static PessoaDao _pessoaDao = new PessoaDao();
         private static RelatorioOperacaoDao _relatorioDao = new RelatorioOperacaoDao();
         private static FuncionarioDao _funcionarioDao = new FuncionarioDao();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Treinamento._1___VIEW.VIEW_MODEL;
+using Treinamento._3___DAO;
 
 namespace Treinamento._1___VIEW
 {
@@ -11,11 +12,11 @@ namespace Treinamento._1___VIEW
     {
         private ContaBancariaDao _contaDao;
         private PessoaDao _pessoaDao;
-        private AgenciaDao _agenciaDao;
+        private IDao<Agencia> _agenciaDao;
         private ViewPessoa _pessoaView;
         private ViewAgencia _viewAgencia;
 
-        public ViewContaBancaria(ContaBancariaDao contaDao, PessoaDao pessoaDao, AgenciaDao agenciaDao, ViewPessoa viewPessoa, ViewAgencia viewAgencia)
+        public ViewContaBancaria(ContaBancariaDao contaDao, PessoaDao pessoaDao, IDao<Agencia> agenciaDao, ViewPessoa viewPessoa, ViewAgencia viewAgencia)
         {
             _contaDao = contaDao;
             _pessoaDao = pessoaDao;

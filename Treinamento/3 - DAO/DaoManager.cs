@@ -16,7 +16,7 @@ namespace Treinamento._3___DAO
 
         public void SetConnectionString()
         {
-            _connection.ConnectionString = @"user id = sa; password = Nddadm!@#$%;server=tescon20800-1\sql2016;database=MyBank;connection timeout=150";
+            _connection.ConnectionString = @"Data Source=tescon20800-1\sql2016;User ID=sa;Password=Nddadm!@#$%;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         }
 
         public void OpenConnection()

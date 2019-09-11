@@ -1,13 +1,14 @@
 ﻿using System;
 using Treinamento._1___VIEW.VIEW_MODEL;
+using Treinamento._3___DAO;
 
 namespace Treinamento._1___VIEW
 {
     public class ViewAgencia
     {
-        private AgenciaDao _agenciaDao;
+        private IDao<Agencia> _agenciaDao;
 
-        public ViewAgencia(AgenciaDao agenciaDao)
+        public ViewAgencia(IDao<Agencia> agenciaDao)
         {
             _agenciaDao = agenciaDao;
         }
