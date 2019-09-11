@@ -12,7 +12,6 @@ namespace Treinamento._1___VIEW
     public class ViewFuncionario : IViewModel<Funcionario>
     {
         private FuncionarioDao _funcionarioDao;
-        private Docs _docs = new Docs();
 
         public ViewFuncionario(FuncionarioDao funcionarioDao)
         {
@@ -43,6 +42,8 @@ namespace Treinamento._1___VIEW
 
             Console.WriteLine("Digite o salario do funcionario");
             double salario = Convert.ToDouble(Console.ReadLine());
+
+            Docs _docs = new Docs();
 
             string _cpfCnpj = _docs.LerCPFCNPJ();
 

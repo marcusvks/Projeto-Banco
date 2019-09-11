@@ -3,7 +3,7 @@ using Treinamento._1___VIEW.VIEW_MODEL;
 
 namespace Treinamento._1___VIEW
 {
-    public class ViewAgencia : IViewModel<Agencia>
+    public class ViewAgencia
     {
         private AgenciaDao _agenciaDao;
 

@@ -72,6 +72,12 @@
     <Compile Include="2 - MODEL\ContaBancaria.cs" />
     <Compile Include="3 - DAO\ContaBancariaDao.cs" />
     <Compile Include="2 - MODEL\Pessoa.cs" />
+    <Compile Include="3 - DAO\DaoManager.cs" />
+    <Compile Include="3 - DAO\DAOSQL\AgenciaDaoSql.cs" />
+    <Compile Include="3 - DAO\DAOSQL\ContaBancariaDaoSql.cs" />
+    <Compile Include="3 - DAO\DAOSQL\FuncionarioDaoSql.cs" />
+    <Compile Include="3 - DAO\DAOSQL\PessoaDaoSql.cs" />
+    <Compile Include="3 - DAO\DAOSQL\RelatorioOperacaoDaoSql.cs" />
     <Compile Include="3 - DAO\FuncionarioDao.cs" />
     <Compile Include="3 - DAO\Interface\IDao.cs" />
     <Compile Include="3 - DAO\PessoaDao.cs" />

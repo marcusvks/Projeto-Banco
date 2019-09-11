@@ -24,7 +24,7 @@ namespace Treinamento._1___VIEW
 
                 case ConsoleKey.F2:
                     Console.Clear();
-                    viewPessoa.ListaEFormata();
+                    viewPessoa.ListaEFormata(pessoaDao);
                     break;
 
                 case ConsoleKey.F12:

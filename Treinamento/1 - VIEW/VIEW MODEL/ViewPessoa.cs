@@ -3,10 +3,9 @@ using Treinamento._1___VIEW.VIEW_MODEL;
 
 namespace Treinamento._1___VIEW
 {
-    public class ViewPessoa : IViewModel<Pessoa>
+    public class ViewPessoa
     {
         private PessoaDao _pessoaDao;
-        private Docs _docs = new Docs();
 
         public ViewPessoa(PessoaDao pessoaDao)
         {
@@ -31,7 +30,9 @@ namespace Treinamento._1___VIEW
 
             Console.WriteLine("Digite o numero do endereço");
             int numEndereco = Convert.ToInt32(Console.ReadLine());
-         
+
+            Docs _docs = new Docs();
+
             string _cpfCnpj = _docs.LerCPFCNPJ();
         
             string _tipoPessoa = _docs.PedeCpfOuCnpj(ref _cpfCnpj);
@@ -45,9 +46,10 @@ namespace Treinamento._1___VIEW
             Console.Clear();
         }
 
-        public void ListaEFormata()
+        public void ListaEFormata(PessoaDao pessoaDao)
         {
             Console.Clear();
+            _pessoaDao = pessoaDao;
 
             if (_pessoaDao.ListaDados().Count != 0)
             {
