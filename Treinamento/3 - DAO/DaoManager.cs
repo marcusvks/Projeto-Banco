@@ -16,9 +16,9 @@ namespace Treinamento._3___DAO
 
         public void SetConnectionString()
         {
-            _connection.ConnectionString = @"Data Source=tescon20800-1\sql2016;User ID=sa;Password=Nddadm!@#$%;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            _connection.ConnectionString = @"Data Source=tescon20800-1\sql2016;Initial Catalog = MyBank; User ID = sa; Password=Nddadm!@#$%;Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         }
-
+        
         public void OpenConnection()
         {
             if (_connection.State == ConnectionState.Closed)
@@ -48,7 +48,6 @@ namespace Treinamento._3___DAO
                     foreach (var parameter in parameters)
                         command.Parameters.Add(parameter);
 
-                CloseConnection();
                 return command.ExecuteScalar();
 
             }
