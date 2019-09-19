@@ -12,12 +12,11 @@ namespace Treinamento._3___DAO.DAOSQL
     public class AgenciaDaoSql : IDao<Agencia>
     {
         private DaoManager _daoManager = new DaoManager();
+        IEnumerable<SqlParameter> parameters;
 
         public Agencia BuscaPorId(int id)
         {
             string commandText = "SELECT * FROM AGENCIA where id = @id";
-
-            IEnumerable<SqlParameter> parameters;
 
             parameters = new List<SqlParameter>()
             {
@@ -28,12 +27,10 @@ namespace Treinamento._3___DAO.DAOSQL
 
             var ds = _daoManager.SelectRegisters(commandText, parameters);
 
-            Agencia result;
-
-                result = new Agencia(ds.Tables[0].Rows[0].ItemArray[1].ToString(), 
-                    ds.Tables[0].Rows[0].ItemArray[2].ToString(),
-                    ds.Tables[0].Rows[0].ItemArray[3].ToString(),
-                    ds.Tables[0].Rows[0].ItemArray[4].ToString());
+            Agencia result = new Agencia(ds.Tables[0].Rows[0].ItemArray[1].ToString(), 
+                ds.Tables[0].Rows[0].ItemArray[2].ToString(),
+                ds.Tables[0].Rows[0].ItemArray[3].ToString(),
+                ds.Tables[0].Rows[0].ItemArray[4].ToString());
 
                 return result;
         }
@@ -42,8 +39,6 @@ namespace Treinamento._3___DAO.DAOSQL
         {
 
             string commandText = "INSERT INTO Agencia (Codigo, Nome, Nome_cidade, UF) VALUES (@codigo, @nome, @nome_cidade, @uf)";
-
-            IEnumerable<SqlParameter> parameters;
 
             parameters = new List<SqlParameter>()
             {
@@ -61,7 +56,7 @@ namespace Treinamento._3___DAO.DAOSQL
         {
             string commandText = "SELECT * FROM AGENCIA";
 
-            IEnumerable<SqlParameter> parameters = new List<SqlParameter>();
+            parameters = new List<SqlParameter>();
 
             _daoManager.SetConnectionString();
             var ds = _daoManager.SelectRegisters(commandText, parameters);
@@ -77,6 +72,36 @@ namespace Treinamento._3___DAO.DAOSQL
             }
 
             return results;
+        }
+
+        public void UpdateDados(Agencia agencia)
+        {
+            string commandText = "update agencia set codigo = @codigo, nome = @nome, Nome_cidade = @nome_cidade, UF = @uf where id = @id";
+
+            parameters = new List<SqlParameter>()
+            {
+                new SqlParameter("@codigo", agencia.Codigo),
+                new SqlParameter("@nome", agencia.Nome),
+                new SqlParameter("@nome_cidade", agencia.NomeCidade),
+                new SqlParameter("@uf", agencia.Uf),
+                new SqlParameter("@id", agencia.Id),
+            };
+
+            _daoManager.SetConnectionString();
+            _daoManager.ExecuteCommand(commandText, parameters);
+        }
+
+        public void DeleteDados(int id)
+        {
+            string commandText = "delete from agencia where id = @id";
+
+            parameters = new List<SqlParameter>()
+            {
+                new SqlParameter("@id", id),
+            };
+
+            _daoManager.SetConnectionString();
+            _daoManager.ExecuteCommand(commandText, parameters);
         }
 
         public int PegaUltimoId()

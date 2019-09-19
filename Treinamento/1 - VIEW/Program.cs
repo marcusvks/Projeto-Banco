@@ -13,8 +13,11 @@ namespace Treinamento
 
         static void Main(string[] args)
         {
-            AgenciaDaoSql a = new AgenciaDaoSql();
-            a.ListaDados();
+            Pessoa p = new Pessoa("marcaum", "lajaica", "1992-05-01", 666, "F", "brasiliao", "99999999999");
+            p.Id = 1;
+
+            PessoaDaoSql pd = new PessoaDaoSql();
+            pd.CadastraDados(p);
 
             ViewMenu menu = new ViewMenu();
             menu.IniciaMenu();
