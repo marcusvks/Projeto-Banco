@@ -1,0 +1,13 @@
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.exe.config
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.exe
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.pdb
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.exe
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.pdb
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.exe.config
+D:\GitHub\Projeto-Banco\TransformaArquivos\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csprojAssemblyReference.cache
+D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CoreCompileInputs.cache
+D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CopyComplete
+D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.exe
+D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.pdb
