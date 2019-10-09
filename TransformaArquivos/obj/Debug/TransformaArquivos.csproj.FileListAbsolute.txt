@@ -11,3 +11,16 @@ D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.C
 D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CopyComplete
 D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.exe
 D:\GitHub\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.pdb
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.exe.config
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.exe
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.pdb
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\Newtonsoft.Json.dll
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.exe
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.pdb
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.exe.config
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\bin\Debug\Newtonsoft.Json.xml
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csprojAssemblyReference.cache
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CopyComplete
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.exe
+D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.pdb
