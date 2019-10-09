@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Treinamento
+namespace TreinamentoDominio
 {
     public class ContaBancaria
     {

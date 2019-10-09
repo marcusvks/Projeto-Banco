@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Treinamento._3___DAO
+namespace TreinamentoInfra
 {
     public class DaoManager
     {

@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreinamentoDominio;
+using TreinamentoInfra.Interface;
 
-namespace Treinamento._3___DAO.DAOSQL
+namespace TreinamentoInfra.DaoSql
 {
     public class AgenciaDaoSql : IDao<Agencia>
     {

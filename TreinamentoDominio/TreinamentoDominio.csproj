@@ -49,6 +49,7 @@
     <Compile Include="Agencia.cs" />
     <Compile Include="ContaBancaria.cs" />
     <Compile Include="Funcionario.cs" />
+    <Compile Include="Interfaces\IDao.cs" />
     <Compile Include="Operacao.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

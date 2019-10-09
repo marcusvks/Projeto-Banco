@@ -127,3 +127,16 @@ D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.xml
 D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
 D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
 D:\Projetos\Projeto_Banco\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csprojAssemblyReference.cache
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\Treinamento.exe.config
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\Treinamento.exe
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\Treinamento.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.dll
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\ControlzEx.xml
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\bin\Debug\Microsoft.Xaml.Behaviors.xml
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csprojAssemblyReference.cache
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CoreCompileInputs.cache
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\obj\Debug\Treinamento.csproj.CopyComplete
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\obj\Debug\Treinamento.exe
+E:\Projetos\GitProjetos\Projeto-Banco\Treinamento\obj\Debug\Treinamento.pdb

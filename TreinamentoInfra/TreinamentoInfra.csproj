@@ -46,19 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UTIL\CriaListaCompleta.cs" />
-    <Compile Include="UTIL\ValidadorDeDocumento.cs" />
-    <Compile Include="BASE STARTER\DataBase.cs" />
+    <Compile Include="Util\CriaListaCompleta.cs" />
+    <Compile Include="Util\ValidadorDeDocumento.cs" />
+    <Compile Include="BaseStarter\DataBase.cs" />
     <Compile Include="AgenciaDao.cs" />
     <Compile Include="ContaBancariaDao.cs" />
     <Compile Include="DaoManager.cs" />
-    <Compile Include="DAOSQL\AgenciaDaoSql.cs" />
-    <Compile Include="DAOSQL\ContaBancariaDaoSql.cs" />
-    <Compile Include="DAOSQL\FuncionarioDaoSql.cs" />
-    <Compile Include="DAOSQL\PessoaDaoSql.cs" />
-    <Compile Include="DAOSQL\RelatorioOperacaoDaoSql.cs" />
+    <Compile Include="DaoSql\AgenciaDaoSql.cs" />
+    <Compile Include="DaoSql\ContaBancariaDaoSql.cs" />
+    <Compile Include="DaoSql\FuncionarioDaoSql.cs" />
+    <Compile Include="DaoSql\PessoaDaoSql.cs" />
+    <Compile Include="DaoSql\RelatorioOperacaoDaoSql.cs" />
     <Compile Include="FuncionarioDao.cs" />
-    <Compile Include="Interface\IDao.cs" />
     <Compile Include="PessoaDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelatorioOperacaoDao.cs" />

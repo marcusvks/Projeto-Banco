@@ -1,4 +1,4 @@
-﻿namespace Treinamento
+﻿namespace TreinamentoInfra.Util
 {
     public static class ValidadorDeDocumento
     {

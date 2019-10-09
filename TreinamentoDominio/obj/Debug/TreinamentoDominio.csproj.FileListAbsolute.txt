@@ -1,2 +1,8 @@
 D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csprojAssemblyReference.cache
 D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csproj.CoreCompileInputs.cache
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csproj.CoreCompileInputs.cache
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\bin\Debug\TreinamentoDominio.dll.config
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\bin\Debug\TreinamentoDominio.dll
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\bin\Debug\TreinamentoDominio.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.dll
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.pdb

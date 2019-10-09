@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreinamentoDominio;
+using TreinamentoInfra.Interface;
 
-namespace Treinamento._3___DAO.DAOSQL
+namespace TreinamentoInfra.DaoSql
 {
     public class ContaBancariaDaoSql : IDao<ContaBancaria>
     {

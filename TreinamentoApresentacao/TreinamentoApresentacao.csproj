@@ -48,22 +48,22 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIEW MENU\ViewMenu.cs" />
-    <Compile Include="VIEW MENU\ViewMenuAgencia.cs" />
-    <Compile Include="VIEW MENU\ViewMenuConta.cs" />
-    <Compile Include="VIEW MENU\ViewMenuFuncionario.cs" />
-    <Compile Include="VIEW MENU\ViewMenuOperacoes.cs" />
-    <Compile Include="VIEW MENU\ViewMenuPessoa.cs" />
-    <Compile Include="VIEW MODEL\Docs.cs" />
-    <Compile Include="VIEW MODEL\Interface\IViewModel.cs" />
-    <Compile Include="VIEW MODEL\ViewAgencia.cs" />
-    <Compile Include="VIEW MODEL\ViewContaBancaria.cs" />
-    <Compile Include="VIEW MODEL\ViewFuncionario.cs" />
-    <Compile Include="VIEW MODEL\ViewPessoa.cs" />
-    <Compile Include="VIEW OPERACOES\ViewDeposito.cs" />
-    <Compile Include="VIEW OPERACOES\ViewRelatorioOperacoes.cs" />
-    <Compile Include="VIEW OPERACOES\ViewSaque.cs" />
-    <Compile Include="VIEW OPERACOES\ViewTransferencia.cs" />
+    <Compile Include="Menus\ViewMenu.cs" />
+    <Compile Include="Menus\ViewMenuAgencia.cs" />
+    <Compile Include="Menus\ViewMenuConta.cs" />
+    <Compile Include="Menus\ViewMenuFuncionario.cs" />
+    <Compile Include="Menus\ViewMenuOperacoes.cs" />
+    <Compile Include="Menus\ViewMenuPessoa.cs" />
+    <Compile Include="Models\Docs.cs" />
+    <Compile Include="Models\Interface\IViewModel.cs" />
+    <Compile Include="Models\ViewAgencia.cs" />
+    <Compile Include="Models\ViewContaBancaria.cs" />
+    <Compile Include="Models\ViewFuncionario.cs" />
+    <Compile Include="Models\ViewPessoa.cs" />
+    <Compile Include="Operaçoes\ViewDeposito.cs" />
+    <Compile Include="Operaçoes\ViewRelatorioOperacoes.cs" />
+    <Compile Include="Operaçoes\ViewSaque.cs" />
+    <Compile Include="Operaçoes\ViewTransferencia.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

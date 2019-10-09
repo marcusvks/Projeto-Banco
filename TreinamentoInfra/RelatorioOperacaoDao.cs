@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Treinamento._2___MODEL;
+using TreinamentoDominio;
 
-namespace Treinamento._3___DAO
+namespace TreinamentoInfra
 {
     public class RelatorioOperacaoDao
     {

@@ -24,3 +24,16 @@ D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaA
 D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CopyComplete
 D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.exe
 D:\Projetos\Projeto_Banco\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.exe.config
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.exe
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\TransformaArquivos.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\Newtonsoft.Json.dll
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.exe
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\Treinamento.exe.config
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\bin\Debug\Newtonsoft.Json.xml
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csprojAssemblyReference.cache
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CoreCompileInputs.cache
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.csproj.CopyComplete
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.exe
+E:\Projetos\GitProjetos\Projeto-Banco\TransformaArquivos\obj\Debug\TransformaArquivos.pdb

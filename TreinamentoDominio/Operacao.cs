@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Treinamento._3___DAO;
 
-namespace Treinamento._2___MODEL
+namespace TreinamentoDominio
 {
     public class Operacao
     {
