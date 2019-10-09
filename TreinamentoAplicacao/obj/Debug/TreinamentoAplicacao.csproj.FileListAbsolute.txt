@@ -1,0 +1,7 @@
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoAplicacao.exe.config
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoAplicacao.exe
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoAplicacao.pdb
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.csprojAssemblyReference.cache
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.exe
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.pdb

@@ -1,0 +1,2 @@
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoApresentacao\obj\Debug\TreinamentoApresentacao.csprojAssemblyReference.cache
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoApresentacao\obj\Debug\TreinamentoApresentacao.csproj.CoreCompileInputs.cache

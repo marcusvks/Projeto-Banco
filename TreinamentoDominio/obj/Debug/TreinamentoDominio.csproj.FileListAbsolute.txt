@@ -1,0 +1,2 @@
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csprojAssemblyReference.cache
+D:\Projetos\Projeto_Banco\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csproj.CoreCompileInputs.cache
