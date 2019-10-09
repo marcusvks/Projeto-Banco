@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Agencias\AgenciaServices.cs" />
+    <Compile Include="Features\Conta Bancarias\ContaBancariaServices.cs" />
+    <Compile Include="Features\Funcionarios\FuncionariosServices.cs" />
+    <Compile Include="Features\Operaçoes\OperacoesServices.cs" />
+    <Compile Include="Features\Pessoas\PessoasServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,12 +66,6 @@
       <Name>TreinamentoInfra</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Agencias\" />
-    <Folder Include="Features\Conta Bancarias\" />
-    <Folder Include="Features\Funcionarios\" />
-    <Folder Include="Features\Operaçoes\" />
-    <Folder Include="Features\Pessoas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

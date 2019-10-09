@@ -1,17 +1,22 @@
 ﻿using System;
+using TreinamentoAplicacao.Features.Agencias;
 using TreinamentoDominio;
 using TreinamentoInfra.Interface;
-
 
 namespace TreinamentoApresentacao.Models
 {
     public class ViewAgencia
     {
-        private IDao<Agencia> _agenciaDao;
+        private AgenciaServices _agenciaServices;
 
-        public ViewAgencia(IDao<Agencia> agenciaDao)
+        public ViewAgencia(AgenciaServices agenciaServices)
         {
-            _agenciaDao = agenciaDao;
+            _agenciaServices = agenciaServices;
+        }
+
+        public ViewAgencia()
+        {
+            _agenciaServices = new AgenciaServices();
         }
 
         public void CadastraDados()
@@ -30,7 +35,7 @@ namespace TreinamentoApresentacao.Models
 
             Agencia agencia = new Agencia(CodAgencia, NomeAgencia, NomeCidade, Estado);
 
-            _agenciaDao.CadastraDados(agencia);
+            _agenciaServices.CadastraDados(agencia);
 
             Console.Clear();
             Console.WriteLine("Agencia cadastrada com sucesso \n Pressione qualquer tecla para voltar ao menu");
@@ -42,7 +47,7 @@ namespace TreinamentoApresentacao.Models
         {
             Console.Clear();
 
-            if (_agenciaDao.ListaDados().Count != 0)
+            if (_agenciaServices.ListaDados().Count != 0)
             {
                 foreach (var agencia in _agenciaDao.ListaDados())
                 {
