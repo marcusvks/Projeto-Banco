@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using Treinamento;
 using TreinamentoApresentacao.Models;
 using TreinamentoDominio;
+using TreinamentoDominio.Interfaces;
 using TreinamentoInfra.Interface;
 
 namespace TreinamentoApresentacao.Menus
 {
     public class ViewMenuAgencia
     {
-        public void IniciaMenuAgencia(ViewAgencia viewAgencia, ViewMenu viewMenu, IDao<Agencia> agenciaDao)
+        public void IniciaMenuAgencia(ViewAgencia viewAgencia, ViewMenu viewMenu, IServices<Agencia> agenciaServices)
         {
             ConsoleKeyInfo _opcao;
             

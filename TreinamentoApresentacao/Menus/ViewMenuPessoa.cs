@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Treinamento;
+using TreinamentoAplicacao.Features.PessoasServices;
 using TreinamentoApresentacao.Models;
 using TreinamentoInfra;
 
@@ -11,7 +12,7 @@ namespace TreinamentoApresentacao.Menus
 {
     public class ViewMenuPessoa
     {
-        public void StartMenuPessoa(ViewPessoa viewPessoa, ViewMenu viewMenu, PessoaDao pessoaDao)
+        public void StartMenuPessoa(ViewPessoa viewPessoa, ViewMenu viewMenu, PessoasServices pessoaServices)
         {
             ConsoleKeyInfo _opcao;
 
@@ -26,7 +27,7 @@ namespace TreinamentoApresentacao.Menus
 
                 case ConsoleKey.F2:
                     Console.Clear();
-                    viewPessoa.ListaEFormata(pessoaDao);
+                    viewPessoa.ListaEFormata(pessoaServices);
                     break;
 
                 case ConsoleKey.F12:

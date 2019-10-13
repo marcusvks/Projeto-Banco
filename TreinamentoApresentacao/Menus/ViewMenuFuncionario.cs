@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreinamentoAplicacao.Features.FuncionariosServices;
 using TreinamentoApresentacao.Models;
 using TreinamentoInfra;
 
@@ -10,7 +11,7 @@ namespace TreinamentoApresentacao.Menus
 {
     public class ViewMenuFuncionario
     {
-        public void IniciaMenuFuncionario(FuncionarioDao funcionarioDao, ViewMenu viewMenu, ViewFuncionario viewFuncionario)
+        public void IniciaMenuFuncionario(FuncionariosServices funcionarioServices, ViewMenu viewMenu, ViewFuncionario viewFuncionario)
         {
             ConsoleKeyInfo _opcao;
 

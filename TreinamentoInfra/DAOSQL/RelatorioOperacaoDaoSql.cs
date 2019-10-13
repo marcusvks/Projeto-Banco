@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreinamentoDominio;
 using TreinamentoInfra.Interface;
 
 namespace TreinamentoInfra.DaoSql
 {
-    public class RelatorioOperacaoDaoSql : IDao<RelatorioOperacaoDao>
+    public class RelatorioOperacaoDaoSql : IDao<Operacao>
     {
-        public RelatorioOperacaoDao BuscaPorId(int id)
+        public Operacao BuscaPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void CadastraDados(RelatorioOperacaoDao obj)
+        public void CadastraDados(Operacao obj)
         {
             throw new NotImplementedException();
         }
 
-        public List<RelatorioOperacaoDao> ListaDados()
+        public List<Operacao> ListaDados()
         {
-            throw new NotImplementedException();
+            return new List<Operacao>();
         }
 
         public int PegaUltimoId()

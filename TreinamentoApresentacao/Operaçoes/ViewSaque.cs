@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreinamentoAplicacao.Features.ContaBancariaServices;
+using TreinamentoAplicacao.Features.OperacoesServices;
 using TreinamentoApresentacao.Models;
 using TreinamentoDominio;
 
@@ -10,14 +12,14 @@ namespace TreinamentoInfra.Operaçoes
 {
     public class ViewSaque
     {
-        public void RealizaSaque(RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao, ViewContaBancaria viewConta)
+        public void RealizaSaque(OperacoesServices operacoesServices, ContaBancariaServices contaServices, ViewContaBancaria viewConta)
         {
             Console.Clear();
 
             Console.WriteLine("Informe o ID da sua conta bancaria");
             int IdConta = Convert.ToInt32(Console.ReadLine());
 
-            ContaBancaria contaOrigem = contaDao.BuscaPorId(IdConta);
+            ContaBancaria contaOrigem = contaServices.BuscaPorId(IdConta);
 
             if (contaOrigem != null)
             {
@@ -35,7 +37,7 @@ namespace TreinamentoInfra.Operaçoes
                     contaOrigem.Saque(valor);
                     operacao.RealizaOperacao(contaOrigem, contaOrigem, 2, valor);
 
-                    relatorioDao.AdicionaNovaOperacao(operacao);
+                    operacoesServices.AdicionaNovaOperacao(operacao);
 
                     Console.WriteLine("\nOperacao realizada com sucesso");
                 }

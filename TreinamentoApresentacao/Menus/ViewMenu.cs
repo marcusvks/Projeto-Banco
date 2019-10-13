@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using TreinamentoAplicacao.Features.AgenciasServices;
+using TreinamentoAplicacao.Features.ContaBancariaServices;
+using TreinamentoAplicacao.Features.FuncionariosServices;
+using TreinamentoAplicacao.Features.OperacoesServices;
+using TreinamentoAplicacao.Features.PessoasServices;
 using TreinamentoApresentacao.Models;
-using TreinamentoInfra;
-using TreinamentoInfra.BaseStarter;
-using TreinamentoInfra.DaoSql;
 using TreinamentoInfra.Operaçoes;
 
 namespace TreinamentoApresentacao.Menus
@@ -16,36 +15,38 @@ namespace TreinamentoApresentacao.Menus
         private static ConsoleKeyInfo _opcao;
 
         //dao
-        private static ContaBancariaDao _contaDao = new ContaBancariaDao();
-        private static AgenciaDaoSql _agenciaDao = new AgenciaDaoSql();
-        private static PessoaDao _pessoaDao = new PessoaDao();
-        private static RelatorioOperacaoDao _relatorioDao = new RelatorioOperacaoDao();
-        private static FuncionarioDao _funcionarioDao = new FuncionarioDao();
+        private static readonly ContaBancariaServices _contaServices = new ContaBancariaServices();
+        private static readonly AgenciaServices _agenciaServices = new AgenciaServices();
+        private static readonly PessoasServices _pessoaServices = new PessoasServices();
+        private static readonly OperacoesServices _relatorioDao = new OperacoesServices();
+        private static readonly FuncionariosServices _funcionarioDao = new FuncionariosServices();
+
         //View Menu
-        private static ViewMenuAgencia _viewMenuAgencia = new ViewMenuAgencia();
-        private static ViewMenuConta _viewMenuConta = new ViewMenuConta();
-        private static ViewMenuFuncionario _viewMenuFuncionario = new ViewMenuFuncionario();
-        private static ViewMenuPessoa _viewMenuPessoa = new ViewMenuPessoa();
-        private static ViewMenuOperacoes _viewMenuOperacoes = new ViewMenuOperacoes();
+        private static readonly ViewMenuAgencia _viewMenuAgencia = new ViewMenuAgencia();
+        private static readonly ViewMenuConta _viewMenuConta = new ViewMenuConta();
+        private static readonly ViewMenuFuncionario _viewMenuFuncionario = new ViewMenuFuncionario();
+        private static readonly ViewMenuPessoa _viewMenuPessoa = new ViewMenuPessoa();
+        private static readonly ViewMenuOperacoes _viewMenuOperacoes = new ViewMenuOperacoes();
+
         //view
-        private static ViewAgencia _viewAgencia = new ViewAgencia(_agenciaDao);
-        private static ViewContaBancaria _viewContaBancaria = new ViewContaBancaria(_contaDao, _pessoaDao, _agenciaDao, _viewPessoa, _viewAgencia);
-        private static ViewPessoa _viewPessoa = new ViewPessoa(_pessoaDao);
-        private static ViewSaque _viewSaque = new ViewSaque();
-        private static ViewDeposito _viewDeposito = new ViewDeposito();
-        private static ViewTransferencia _viewTransferencia = new ViewTransferencia();
-        private static ViewContaBancaria _viewConta = new ViewContaBancaria(_contaDao, _pessoaDao, _agenciaDao, _viewPessoa, _viewAgencia);
-        private static ViewRelatorioOperacoes _viewRelatorio = new ViewRelatorioOperacoes();
-        private static ViewFuncionario _viewFuncionario = new ViewFuncionario(_funcionarioDao);
+        private static readonly ViewAgencia _viewAgencia = new ViewAgencia(_agenciaServices);
+        //private static ViewContaBancaria _viewContaBancaria = new ViewContaBancaria(_contaServices, _pessoaServices, _agenciaServices, _viewPessoa, _viewAgencia);
+        private static readonly ViewPessoa _viewPessoa = new ViewPessoa(_pessoaServices);
+        private static readonly ViewSaque _viewSaque = new ViewSaque();
+        private static readonly ViewDeposito _viewDeposito = new ViewDeposito();
+        private static readonly ViewTransferencia _viewTransferencia = new ViewTransferencia();
+        private static readonly ViewContaBancaria _viewConta = new ViewContaBancaria(_contaServices, _pessoaServices, _agenciaServices, _viewPessoa, _viewAgencia);
+        private static readonly ViewRelatorioOperacoes _viewRelatorio = new ViewRelatorioOperacoes();
+        private static readonly ViewFuncionario _viewFuncionario = new ViewFuncionario(_funcionarioDao);
 
         public ViewMenu()
         {
-            DataBase.CadastrarPessoasFisicas(_pessoaDao, 10);
-            DataBase.CadastraAgencias(_agenciaDao, 3);
+            _pessoaServices.CadastrarPessoasFisicas();
+            _agenciaServices.CadastraAgencias();
 
             StringBuilder listaCompleta;
 
-            var a = _pessoaDao.ListaDados();
+            var a = _pessoaServices.ListaDados();
 
             listaCompleta = new StringBuilder();
             foreach (var item in a)
@@ -65,15 +66,15 @@ namespace TreinamentoApresentacao.Menus
                 {
                     case ConsoleKey.F1:
                         Console.Clear();
-                        _viewMenuPessoa.StartMenuPessoa(_viewPessoa, this, _pessoaDao);
+                        _viewMenuPessoa.StartMenuPessoa(_viewPessoa, this, _pessoaServices);
                         break;
                     case ConsoleKey.F2:
                         Console.Clear();
-                        _viewMenuConta.IniciaMenuConta(_viewConta,_viewPessoa, _viewAgencia, _agenciaDao, _contaDao, _pessoaDao);
+                        _viewMenuConta.IniciaMenuConta(_viewConta,_viewPessoa, _viewAgencia, _agenciaServices, _contaServices, _pessoaServices);
                         break;
                     case ConsoleKey.F3:
                         Console.Clear();
-                        _viewMenuAgencia.IniciaMenuAgencia(_viewAgencia, this, _agenciaDao);
+                        _viewMenuAgencia.IniciaMenuAgencia(_viewAgencia, this, _agenciaServices);
                         break;
                     case ConsoleKey.F4:
                         Console.Clear();
@@ -81,7 +82,7 @@ namespace TreinamentoApresentacao.Menus
                         break;
                     case ConsoleKey.F5:
                         Console.Clear();
-                        _viewMenuOperacoes.StartMenuOperacoes(_viewConta, _viewRelatorio, this, _viewTransferencia, _viewDeposito, _viewSaque, _relatorioDao, _contaDao);
+                        _viewMenuOperacoes.StartMenuOperacoes(_viewConta, _viewRelatorio, this, _viewTransferencia, _viewDeposito, _viewSaque, _relatorioDao, _contaServices);
                         break;
                 }
             } while (_opcao.Key != ConsoleKey.F12);

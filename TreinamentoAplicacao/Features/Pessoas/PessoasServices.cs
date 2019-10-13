@@ -5,29 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 using TreinamentoDominio;
 using TreinamentoDominio.Interfaces;
+using TreinamentoInfra;
+using TreinamentoInfra.BaseStarter;
+using TreinamentoInfra.DaoSql;
 
-namespace TreinamentoAplicacao.Features.Pessoas
+namespace TreinamentoAplicacao.Features.PessoasServices
 {
-    class PessoasServices : IServices<Pessoa>
+    public class PessoasServices : IServices<Pessoa>
     {
+        PessoaDaoSql _pessoaDaoSql = new PessoaDaoSql();
+        PessoaDao _pessoaDao = new PessoaDao();
+
         public Pessoa BuscaPorId(int id)
         {
-            throw new NotImplementedException();
+            return _pessoaDao.BuscaPorId(id);
         }
 
         public void CadastraDados(Pessoa obj)
         {
-            throw new NotImplementedException();
+            _pessoaDao.CadastraDados(obj);
         }
 
         public List<Pessoa> ListaDados()
         {
-            throw new NotImplementedException();
+            return _pessoaDao.ListaDados();
         }
 
         public int PegaUltimoId()
         {
-            throw new NotImplementedException();
+            return _pessoaDao.PegaUltimoId();
+        }
+
+        public void CadastrarPessoasFisicas()
+        {
+            DataBase.CadastrarPessoasFisicas(_pessoaDao, 10);
         }
     }
 }

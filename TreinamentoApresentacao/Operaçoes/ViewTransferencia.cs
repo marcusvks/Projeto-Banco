@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreinamentoAplicacao.Features.ContaBancariaServices;
+using TreinamentoAplicacao.Features.OperacoesServices;
 using TreinamentoApresentacao.Models;
 using TreinamentoDominio;
 
@@ -11,14 +13,14 @@ namespace TreinamentoInfra.Operaçoes
 {
     public class ViewTransferencia
     {
-        public void RealizaTransferencia(ViewContaBancaria viewConta, RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao)
+        public void RealizaTransferencia(ViewContaBancaria viewConta, OperacoesServices operacoesServices, ContaBancariaServices contaServices)
         {
             Console.Clear();
             
             Console.WriteLine("Informe o ID da sua conta bancaria");
             int IdContaOrigem = Convert.ToInt32(Console.ReadLine());
 
-            ContaBancaria contaOrigem = contaDao.BuscaPorId(IdContaOrigem);
+            ContaBancaria contaOrigem = contaServices.BuscaPorId(IdContaOrigem);
 
             if (contaOrigem != null)
             {
@@ -30,7 +32,7 @@ namespace TreinamentoInfra.Operaçoes
                 Console.WriteLine("\nInforme o ID da conta bancaria que vai receber a transferencia");
                 int IdContaDestino = Convert.ToInt32(Console.ReadLine());
 
-                ContaBancaria contaMovimentada = contaDao.BuscaPorId(IdContaDestino);
+                ContaBancaria contaMovimentada = contaServices.BuscaPorId(IdContaDestino);
 
                 if (contaMovimentada != null)
                 {
@@ -51,7 +53,7 @@ namespace TreinamentoInfra.Operaçoes
 
                         operacao.RealizaOperacao(contaMovimentada, contaOrigem, 3, ValorTransferencia);
 
-                        relatorioDao.AdicionaNovaOperacao(operacao);
+                        operacoesServices.AdicionaNovaOperacao(operacao);
 
                         Console.WriteLine("Operacao realizada com sucesso");
                     }

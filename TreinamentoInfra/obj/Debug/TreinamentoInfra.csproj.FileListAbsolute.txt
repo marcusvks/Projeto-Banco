@@ -10,3 +10,14 @@ E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoDomi
 E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.csproj.CopyComplete
 E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.dll
 E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.pdb
+D:\Projetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoInfra.dll.config
+D:\Projetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoInfra.dll
+D:\Projetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoInfra.pdb
+D:\Projetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoDominio.dll
+D:\Projetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoDominio.pdb
+D:\Projetos\Projeto-Banco\TreinamentoInfra\bin\Debug\TreinamentoDominio.dll.config
+D:\Projetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.csprojAssemblyReference.cache
+D:\Projetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.csproj.CopyComplete
+D:\Projetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.dll
+D:\Projetos\Projeto-Banco\TreinamentoInfra\obj\Debug\TreinamentoInfra.pdb

@@ -5,29 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using TreinamentoDominio;
 using TreinamentoDominio.Interfaces;
+using TreinamentoInfra;
+using TreinamentoInfra.DaoSql;
 
-namespace TreinamentoAplicacao.Features.Funcionarios
+namespace TreinamentoAplicacao.Features.FuncionariosServices
 {
-    class FuncionariosServices : IServices<Funcionario>
+    public class FuncionariosServices : IServices<Funcionario>
     {
+        FuncionarioDaoSql _funcionarioDaoSql = new FuncionarioDaoSql();
+        FuncionarioDao _funcionarioDao = new FuncionarioDao();
+
         public Funcionario BuscaPorId(int id)
         {
-            throw new NotImplementedException();
+            return _funcionarioDao.BuscaPorId(id);
         }
 
         public void CadastraDados(Funcionario obj)
         {
-            throw new NotImplementedException();
+            _funcionarioDao.CadastraDados(obj);
         }
 
         public List<Funcionario> ListaDados()
         {
-            throw new NotImplementedException();
+            return _funcionarioDao.ListaDados();
         }
 
         public int PegaUltimoId()
         {
-            throw new NotImplementedException();
+            return _funcionarioDao.PegaUltimoId();
         }
     }
 }

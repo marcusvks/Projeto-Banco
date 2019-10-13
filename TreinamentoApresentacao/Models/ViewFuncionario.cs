@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Treinamento._1___VIEW.VIEW_MODEL;
+using TreinamentoAplicacao.Features.FuncionariosServices;
 using TreinamentoDominio;
 using TreinamentoInfra;
 
@@ -12,11 +13,11 @@ namespace TreinamentoApresentacao.Models
 {
     public class ViewFuncionario : IViewModel<Funcionario>
     {
-        private FuncionarioDao _funcionarioDao;
+        private FuncionariosServices _funcionarioServices;
 
-        public ViewFuncionario(FuncionarioDao funcionarioDao)
+        public ViewFuncionario(FuncionariosServices funcionarioServices)
         {
-            _funcionarioDao = funcionarioDao;
+            _funcionarioServices = funcionarioServices;
         }
 
         public void CadastraDados()
@@ -51,7 +52,7 @@ namespace TreinamentoApresentacao.Models
             string _tipoPessoa = _docs.PedeCpfOuCnpj(ref _cpfCnpj);
 
             novoFuncionario = new Funcionario(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj, funcao, salario);
-            _funcionarioDao.CadastraDados(novoFuncionario);
+            _funcionarioServices.CadastraDados(novoFuncionario);
 
             Console.Clear();
             Console.WriteLine("Funcionario cadastrado com sucesso \n Pressione qualquer tecla para voltar ao menu");
@@ -63,9 +64,9 @@ namespace TreinamentoApresentacao.Models
         {
             Console.Clear();
 
-            if (_funcionarioDao.ListaDados().Count != 0)
+            if (_funcionarioServices.ListaDados().Count != 0)
             {
-                foreach (var funcionario in _funcionarioDao.ListaDados())
+                foreach (var funcionario in _funcionarioServices.ListaDados())
                 {
                     Console.WriteLine($"\nID: {funcionario.Id}" +
                         $" \n Nome: {funcionario.Nome} \n Cpf: {funcionario.Cpf} \n Cnpj: {funcionario.Cnpj}" +

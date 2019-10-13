@@ -19,3 +19,17 @@ E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\Treinamento
 E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoInfra.dll.config
 E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.csproj.CopyComplete
 E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.dll
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoAplicacao.dll.config
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoAplicacao.dll
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoAplicacao.pdb
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoDominio.dll
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoInfra.dll
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoDominio.pdb
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoDominio.dll.config
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoInfra.pdb
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\bin\Debug\TreinamentoInfra.dll.config
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.csprojAssemblyReference.cache
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.csproj.CoreCompileInputs.cache
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.csproj.CopyComplete
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.dll
+D:\Projetos\Projeto-Banco\TreinamentoAplicacao\obj\Debug\TreinamentoAplicacao.pdb

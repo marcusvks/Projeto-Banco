@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Treinamento;
+using TreinamentoAplicacao.Features.ContaBancariaServices;
+using TreinamentoAplicacao.Features.OperacoesServices;
 using TreinamentoApresentacao.Models;
 using TreinamentoInfra;
 using TreinamentoInfra.Operaçoes;
@@ -12,7 +14,7 @@ namespace TreinamentoApresentacao.Menus
 {
     public class ViewMenuOperacoes
     {
-        public void StartMenuOperacoes(ViewContaBancaria viewConta, ViewRelatorioOperacoes viewRelatorioOperacoes, ViewMenu viewMenu, ViewTransferencia viewTransferencia, ViewDeposito viewDeposito,ViewSaque viewSaque, RelatorioOperacaoDao relatorioDao, ContaBancariaDao contaDao)
+        public void StartMenuOperacoes(ViewContaBancaria viewConta, ViewRelatorioOperacoes viewRelatorioOperacoes, ViewMenu viewMenu, ViewTransferencia viewTransferencia, ViewDeposito viewDeposito,ViewSaque viewSaque, OperacoesServices operacoeServices, ContaBancariaServices contaServices)
         {
             ConsoleKeyInfo _opcao;
 
@@ -22,22 +24,22 @@ namespace TreinamentoApresentacao.Menus
             {
                 case ConsoleKey.F1:
                     Console.Clear();
-                    viewSaque.RealizaSaque(relatorioDao, contaDao, viewConta);
+                    viewSaque.RealizaSaque(operacoeServices, contaServices, viewConta);
                     break;
 
                 case ConsoleKey.F2:
                     Console.Clear();
-                    viewDeposito.RealizaDeposito(contaDao, viewConta, relatorioDao);
+                    viewDeposito.RealizaDeposito(contaServices, viewConta, operacoeServices);
                     break;
 
                 case ConsoleKey.F3:
                     Console.Clear();
-                    viewTransferencia.RealizaTransferencia(viewConta, relatorioDao, contaDao);
+                    viewTransferencia.RealizaTransferencia(viewConta, operacoeServices, contaServices);
                     break;
 
                 case ConsoleKey.F4:
                     Console.Clear();
-                    viewRelatorioOperacoes.VisualizaRelatorioDeOperacoes(relatorioDao);
+                    viewRelatorioOperacoes.VisualizaRelatorioDeOperacoes(operacoeServices);
                     break;
 
                 case ConsoleKey.F12:

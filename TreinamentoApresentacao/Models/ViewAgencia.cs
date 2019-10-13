@@ -1,5 +1,5 @@
 ﻿using System;
-using TreinamentoAplicacao.Features.Agencias;
+using TreinamentoAplicacao.Features.AgenciasServices;
 using TreinamentoDominio;
 using TreinamentoInfra.Interface;
 
@@ -49,7 +49,7 @@ namespace TreinamentoApresentacao.Models
 
             if (_agenciaServices.ListaDados().Count != 0)
             {
-                foreach (var agencia in _agenciaDao.ListaDados())
+                foreach (var agencia in _agenciaServices.ListaDados())
                 {
                     Console.WriteLine("\nID: {0} \nNome: {1} \nCodigo: {2} \nCidade: {3} \nEstado: {4} \n",
                         agencia.Id, agencia.Nome, agencia.Codigo, agencia.NomeCidade, agencia.Uf);

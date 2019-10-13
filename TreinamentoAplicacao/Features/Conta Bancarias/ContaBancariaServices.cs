@@ -5,29 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using TreinamentoDominio;
 using TreinamentoDominio.Interfaces;
+using TreinamentoInfra;
+using TreinamentoInfra.DaoSql;
 
-namespace TreinamentoAplicacao.Features.Conta_Bancarias
+namespace TreinamentoAplicacao.Features.ContaBancariaServices
 {
     public class ContaBancariaServices : IServices<ContaBancaria>
     {
+        ContaBancariaDaoSql _contaDaoSql = new ContaBancariaDaoSql();
+        ContaBancariaDao _contaDao = new ContaBancariaDao();
+
         public ContaBancaria BuscaPorId(int id)
         {
-            throw new NotImplementedException();
+            return _contaDao.BuscaPorId(id);
         }
 
         public void CadastraDados(ContaBancaria obj)
         {
-            throw new NotImplementedException();
+            _contaDao.CadastraDados(obj);
         }
 
         public List<ContaBancaria> ListaDados()
         {
-            throw new NotImplementedException();
+            return _contaDao.ListaDados();
         }
 
         public int PegaUltimoId()
         {
-            throw new NotImplementedException();
+            return _contaDao.PegaUltimoId();
         }
     }
 }

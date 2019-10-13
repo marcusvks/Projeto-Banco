@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Agencias\AgenciaServices.cs" />
+    <Compile Include="Features\Agencias\AgenciasServices.cs" />
     <Compile Include="Features\Conta Bancarias\ContaBancariaServices.cs" />
     <Compile Include="Features\Funcionarios\FuncionariosServices.cs" />
     <Compile Include="Features\Operaçoes\OperacoesServices.cs" />

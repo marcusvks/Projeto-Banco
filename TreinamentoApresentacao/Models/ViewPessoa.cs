@@ -1,4 +1,5 @@
 ﻿using System;
+using TreinamentoAplicacao.Features.PessoasServices;
 using TreinamentoDominio;
 using TreinamentoInfra;
 
@@ -6,11 +7,11 @@ namespace TreinamentoApresentacao.Models
 {
     public class ViewPessoa
     {
-        private PessoaDao _pessoaDao;
+        private PessoasServices _pessoaServices;
 
-        public ViewPessoa(PessoaDao pessoaDao)
+        public ViewPessoa(PessoasServices pessoaServices)
         {
-            _pessoaDao = pessoaDao;
+            _pessoaServices = pessoaServices;
         }
 
         public virtual void CadastraDados()
@@ -39,7 +40,7 @@ namespace TreinamentoApresentacao.Models
             string _tipoPessoa = _docs.PedeCpfOuCnpj(ref _cpfCnpj);
 
             novapessoa = new Pessoa(nome, cidade, dataNasc, numEndereco, _tipoPessoa, estado, _cpfCnpj);
-            _pessoaDao.CadastraDados(novapessoa);
+            _pessoaServices.CadastraDados(novapessoa);
 
             Console.Clear();
             Console.WriteLine("Pessoa cadastrada com sucesso \n Pressione qualquer tecla para voltar ao menu");
@@ -47,14 +48,14 @@ namespace TreinamentoApresentacao.Models
             Console.Clear();
         }
 
-        public void ListaEFormata(PessoaDao pessoaDao)
+        public void ListaEFormata(PessoasServices pessoaServices)
         {
             Console.Clear();
-            _pessoaDao = pessoaDao;
+            _pessoaServices = pessoaServices;
 
-            if (_pessoaDao.ListaDados().Count != 0)
+            if (_pessoaServices.ListaDados().Count != 0)
             {
-                foreach (var pessoa in _pessoaDao.ListaDados())
+                foreach (var pessoa in _pessoaServices.ListaDados())
                 {
                     Console.WriteLine($"\nID: {pessoa.Id}" +
                         $" \n Nome: {pessoa.Nome} \n Cpf: {pessoa.Cpf} \n Cnpj: {pessoa.Cnpj}" +
