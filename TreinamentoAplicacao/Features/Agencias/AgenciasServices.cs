@@ -14,32 +14,17 @@ namespace TreinamentoAplicacao.Features.AgenciasServices
 {
     public class AgenciaServices : IServices<Agencia>
     {
-        AgenciaDao _agenciaDao = new AgenciaDao();
-        AgenciaDaoSql _agenciaDaoSql = new AgenciaDaoSql();
+        private IDao<Agencia> _agenciaDao;
 
-        public void CadastraDados(Agencia agencia)
-        {
-            _agenciaDao.CadastraDados(agencia);
-        }
+        public void CadastraDados(Agencia agencia) => _agenciaDao.CadastraDados(agencia);
 
-        public List<Agencia> ListaDados()
-        {
-            return _agenciaDao.ListaDados();
-        }
+        public List<Agencia> ListaDados() => _agenciaDao.ListaDados();
 
-        public Agencia BuscaPorId(int id)
-        {
-            return _agenciaDao.BuscaPorId(id);
-        }
+        public Agencia BuscaPorId(int id) => _agenciaDao.BuscaPorId(id);
 
-        public int PegaUltimoId()
-        {
-            return _agenciaDao.PegaUltimoId();
-        }
+        public int PegaUltimoId() => _agenciaDao.PegaUltimoId();
 
-        public void CadastraAgencias()
-        {
-            DataBase.CadastraAgencias(_agenciaDao, 10);
-        }
+        public void CadastraAgencias() => DataBase.CadastraAgencias(_agenciaDao, 10);
+
     }
 }

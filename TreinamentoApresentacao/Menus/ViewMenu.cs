@@ -6,6 +6,9 @@ using TreinamentoAplicacao.Features.FuncionariosServices;
 using TreinamentoAplicacao.Features.OperacoesServices;
 using TreinamentoAplicacao.Features.PessoasServices;
 using TreinamentoApresentacao.Models;
+using TreinamentoDominio;
+using TreinamentoDominio.Interfaces;
+using TreinamentoInfra.Interface;
 using TreinamentoInfra.Operaçoes;
 
 namespace TreinamentoApresentacao.Menus
@@ -14,30 +17,18 @@ namespace TreinamentoApresentacao.Menus
     {
         private static ConsoleKeyInfo _opcao;
 
-        //dao
-        private static readonly ContaBancariaServices _contaServices = new ContaBancariaServices();
-        private static readonly AgenciaServices _agenciaServices = new AgenciaServices();
-        private static readonly PessoasServices _pessoaServices = new PessoasServices();
-        private static readonly OperacoesServices _relatorioDao = new OperacoesServices();
-        private static readonly FuncionariosServices _funcionarioDao = new FuncionariosServices();
+        private static readonly IDao<Pessoa> _pessoaDao;
+        private static readonly IDao<Funcionario> _funcionarioDao;
+        private static readonly IDao<ContaBancaria> _contaDao;
+        private static readonly IDao<Agencia> _agenciaDao;
+        private static readonly IDao<Operacao> _operacaoDao;
 
-        //View Menu
-        private static readonly ViewMenuAgencia _viewMenuAgencia = new ViewMenuAgencia();
-        private static readonly ViewMenuConta _viewMenuConta = new ViewMenuConta();
-        private static readonly ViewMenuFuncionario _viewMenuFuncionario = new ViewMenuFuncionario();
-        private static readonly ViewMenuPessoa _viewMenuPessoa = new ViewMenuPessoa();
-        private static readonly ViewMenuOperacoes _viewMenuOperacoes = new ViewMenuOperacoes();
+        private static readonly IServices<Pessoa> _pessoaServices;
+        private static readonly IServices<Funcionario> _funcionarioServices;
+        private static readonly IServices<ContaBancaria> _contaServices;
+        private static readonly IServices<Agencia> _agenciaServices;
+        private static readonly IServices<Operacao> _operacaoServices;
 
-        //view
-        private static readonly ViewAgencia _viewAgencia = new ViewAgencia(_agenciaServices);
-        //private static ViewContaBancaria _viewContaBancaria = new ViewContaBancaria(_contaServices, _pessoaServices, _agenciaServices, _viewPessoa, _viewAgencia);
-        private static readonly ViewPessoa _viewPessoa = new ViewPessoa(_pessoaServices);
-        private static readonly ViewSaque _viewSaque = new ViewSaque();
-        private static readonly ViewDeposito _viewDeposito = new ViewDeposito();
-        private static readonly ViewTransferencia _viewTransferencia = new ViewTransferencia();
-        private static readonly ViewContaBancaria _viewConta = new ViewContaBancaria(_contaServices, _pessoaServices, _agenciaServices, _viewPessoa, _viewAgencia);
-        private static readonly ViewRelatorioOperacoes _viewRelatorio = new ViewRelatorioOperacoes();
-        private static readonly ViewFuncionario _viewFuncionario = new ViewFuncionario(_funcionarioDao);
 
         public ViewMenu()
         {

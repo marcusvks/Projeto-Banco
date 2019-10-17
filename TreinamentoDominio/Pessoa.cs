@@ -43,5 +43,6 @@ namespace TreinamentoDominio
             return $"Id: {Id} Nome: {Nome} TipoPessoa: {TipoPessoa} Cpf: {Cpf} Cnpj: {Cnpj} NomeCidade: {NomeCidade}" +
                 $"DataNasc: {DataNasc} NumeroEndereco: {NumeroEndereco} Uf: {Uf}";
         }
+
     }
 }

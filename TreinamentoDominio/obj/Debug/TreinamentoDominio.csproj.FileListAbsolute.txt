@@ -13,3 +13,4 @@ D:\Projetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csproj
 D:\Projetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csproj.CoreCompileInputs.cache
 D:\Projetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.dll
 D:\Projetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.pdb
+E:\Projetos\GitProjetos\Projeto-Banco\TreinamentoDominio\obj\Debug\TreinamentoDominio.csprojAssemblyReference.cache

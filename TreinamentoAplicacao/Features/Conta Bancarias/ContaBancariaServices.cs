@@ -7,13 +7,13 @@ using TreinamentoDominio;
 using TreinamentoDominio.Interfaces;
 using TreinamentoInfra;
 using TreinamentoInfra.DaoSql;
+using TreinamentoInfra.Interface;
 
 namespace TreinamentoAplicacao.Features.ContaBancariaServices
 {
     public class ContaBancariaServices : IServices<ContaBancaria>
     {
-        ContaBancariaDaoSql _contaDaoSql = new ContaBancariaDaoSql();
-        ContaBancariaDao _contaDao = new ContaBancariaDao();
+        private IDao<ContaBancaria> _contaDao;
 
         public ContaBancaria BuscaPorId(int id)
         {

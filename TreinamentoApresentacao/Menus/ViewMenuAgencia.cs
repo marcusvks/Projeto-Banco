@@ -13,6 +13,7 @@ namespace TreinamentoApresentacao.Menus
 {
     public class ViewMenuAgencia
     {
+
         public void IniciaMenuAgencia(ViewAgencia viewAgencia, ViewMenu viewMenu, IServices<Agencia> agenciaServices)
         {
             ConsoleKeyInfo _opcao;

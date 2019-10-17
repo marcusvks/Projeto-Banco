@@ -7,13 +7,13 @@ using TreinamentoDominio;
 using TreinamentoDominio.Interfaces;
 using TreinamentoInfra;
 using TreinamentoInfra.DaoSql;
+using TreinamentoInfra.Interface;
 
 namespace TreinamentoAplicacao.Features.FuncionariosServices
 {
     public class FuncionariosServices : IServices<Funcionario>
     {
-        FuncionarioDaoSql _funcionarioDaoSql = new FuncionarioDaoSql();
-        FuncionarioDao _funcionarioDao = new FuncionarioDao();
+        private IDao<Funcionario> _funcionarioDao;
 
         public Funcionario BuscaPorId(int id)
         {

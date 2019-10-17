@@ -7,42 +7,42 @@ using TreinamentoDominio;
 using TreinamentoDominio.Interfaces;
 using TreinamentoInfra;
 using TreinamentoInfra.DaoSql;
+using TreinamentoInfra.Interface;
 
 namespace TreinamentoAplicacao.Features.OperacoesServices
 {
     public class OperacoesServices : IServices<Operacao>
     {
-        RelatorioOperacaoDaoSql _operacaoDaoSql = new RelatorioOperacaoDaoSql();
-        RelatorioOperacaoDao _operacaoDao = new RelatorioOperacaoDao();
+        private IDao<Operacao> _operacaoDao;
 
         public Operacao BuscaPorId(int id)
         {
-            return _operacaoDaoSql.BuscaPorId(id);
+            return _operacaoDao.BuscaPorId(id);
         }
 
         public void CadastraDados(Operacao obj)
         {
-            _operacaoDaoSql.CadastraDados(obj);
+            _operacaoDao.CadastraDados(obj);
         }
 
         public List<Operacao> ListaDados()
         {
-            return _operacaoDaoSql.ListaDados();
+            return _operacaoDao.ListaDados();
         }
 
         public int PegaUltimoId()
         {
-            return _operacaoDaoSql.PegaUltimoId();
+            return _operacaoDao.PegaUltimoId();
         }
 
         public void AdicionaNovaOperacao(Operacao operacao)
         {
-            _operacaoDaoSql.CadastraDados(operacao);
+            _operacaoDao.CadastraDados(operacao);
         }
 
         public List<Operacao> RetornaOperacoes()
         {
-            return _operacaoDaoSql.ListaDados();
+            return _operacaoDao.ListaDados();
         }
     }
 }

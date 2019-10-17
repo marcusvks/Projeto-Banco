@@ -8,13 +8,13 @@ using TreinamentoDominio.Interfaces;
 using TreinamentoInfra;
 using TreinamentoInfra.BaseStarter;
 using TreinamentoInfra.DaoSql;
+using TreinamentoInfra.Interface;
 
 namespace TreinamentoAplicacao.Features.PessoasServices
 {
     public class PessoasServices : IServices<Pessoa>
     {
-        PessoaDaoSql _pessoaDaoSql = new PessoaDaoSql();
-        PessoaDao _pessoaDao = new PessoaDao();
+        private IDao<Pessoa> _pessoaDao;
 
         public Pessoa BuscaPorId(int id)
         {
